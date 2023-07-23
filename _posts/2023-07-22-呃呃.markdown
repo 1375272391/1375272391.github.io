@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "呃呃"
+date:   2023-07-22 19:04:20
+categories: Free
+---
+讲个鬼故事，DNSPOD解析快过期了.......
+![DNSPOD](/assets/post-image/2023-07-22-190212.png)
