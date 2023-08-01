@@ -5,7 +5,7 @@ date:   2023-07-31 18:22:20 +0800
 categories: Free
 tags: village summer wind
 ---
-放些图片
+放些图片 <br>
 ![IMG_20230731_182149.jpg](/assets/Daily-image/IMG_20230731_182149.jpg)
 
 ![IMG_20230731_182152.jpg](/assets/Daily-image/IMG_20230731_182152.jpg)
@@ -30,6 +30,6 @@ tags: village summer wind
 
 ![IMG_20230731_194530.jpg](/assets/Daily-image/IMG_20230731_194530.jpg)
 
-都是压缩过的，不要指望画质了.............
-Emmmmmmmmmm.............
-为了大小，已经成渣了
+都是压缩过的，不要指望画质了............. <br>
+Emmmmmmmmmm............. <br>
+为了大小，已经成渣了 
