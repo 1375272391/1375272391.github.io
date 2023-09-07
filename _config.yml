@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "熊猫1375272391 Github Blog"
+title: "熊猫1375272391 Blog"
 email: 1375272391@qq.com
-author: 熊猫1375272391
+author: XM137
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
 # * current year: {currentYear}
@@ -32,7 +32,7 @@ author: 熊猫1375272391
 copyright: "Copyleft (cleft) 2017-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  初高中的时候闲着没事儿就会拿着本子写一些Blog，现在啊，毕业了......
+  写点啥呢........
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
