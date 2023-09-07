@@ -144,8 +144,8 @@ header_pages:
 # Page default value
 defaults:
    home:
-     heading: "哦，嚯，毕业了反而写不出来了"
-     subheading: "内容么，以后再说....."
+     heading: "写点啥呢...."
+     subheading: "呃......"
      banner: "/assets/WP_20210725_15_03_59_Pro-min.jpg"
 
 # Banner default settings
