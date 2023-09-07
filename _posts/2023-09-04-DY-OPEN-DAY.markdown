@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "电院学长滴馈赠"
+author: XM137
 date:   2023-09-04 17:33:00 +0800
 categories: Daily
 tags: 开学 电院 学长滴馈赠
