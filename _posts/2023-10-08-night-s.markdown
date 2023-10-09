@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "自习"
+title:  "某一天滴自习"
 author: XM137
 date:   2023-10-08 17:46:00 +0800
 categories: Daily
