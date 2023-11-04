@@ -7,4 +7,4 @@ categories: 某人
 tags: night
 ---
 唉，上图<br>
-![IMG_20231104_211412.jpg](/assets/Daily-image/IMG_20231104_211412.jpg)
+![IMG_20231104_211412.jpg](/assets/Daily-image/20231104/IMG_20231104_211412.jpg)
