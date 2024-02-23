@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "熊猫1375272391 Blog"
+title: "XM137 Blog"
 email: 1375272391@qq.com
 author: XM137
 # Copyright setting
@@ -32,7 +32,7 @@ author: XM137
 copyright: "Copyleft (cleft) 2017-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  写点啥呢........
+  或多，或少
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -144,8 +144,8 @@ header_pages:
 # Page default value
 defaults:
    home:
-     heading: "写点啥呢...."
-     subheading: "呃......XM137"
+     heading: "就是现在"
+     subheading: "未来————就在当下"
      banner: "/assets/WP_20210725_15_03_59_Pro-min.jpg"
 
 # Banner default settings
