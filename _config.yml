@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "XM137 日常博客"
+title: "XM137 闲时博客"
 email: 1375272391@qq.com
 author: XM137
 # Copyright setting
