@@ -145,7 +145,7 @@ header_pages:
 defaults:
    home:
      heading: "就是现在"
-     subheading: "未来————就在当下"
+     subheading: "未来 | 就在当下"
      banner: "/assets/2024-02-23_18.49.23.png"
 
 # Banner default settings
