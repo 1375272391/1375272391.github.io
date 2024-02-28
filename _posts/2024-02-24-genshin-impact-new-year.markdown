@@ -15,8 +15,7 @@ tags: 原神 海灯节
 https://www.bilibili.com/video/BV1Rj411p7b1/?t=158.9&p=16
 -->
 
-游戏都能把过年做的如此有年味儿，但是每年过年，都在消失年味，<br>
-每逢过年，都会觉得越来也没有年味儿<br>
+游戏都能把过年做的如此有年味儿，但每逢过年，都会觉得越来也没有年味儿<br>
 是那变了的初心，还是真的越来越没有年味<br>
 
 ![Screenshot_2024-02-24-20-37-05-592_com.miHoYo.ys.mi.jpg](/assets/Daily-image/20240224/Screenshot_2024-02-24-20-37-05-592_com.miHoYo.ys.mi.jpg) <br>
