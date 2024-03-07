@@ -6,7 +6,7 @@ date:   2024-03-07 23:00:00 +0800
 categories: Daily
 tags: H3C HCL
 ---
-# 题目如下
+## 题目如下
 > 1.根据如下拓扑完成实验
 >
 > 2.要求：
@@ -29,7 +29,7 @@ tags: H3C HCL
 ![作业图片](https://p.ananas.chaoxing.com/star3/origin/29b7925834b7c73f2a9502275b5e72d0.PNG)
 -------------
 
-# 解答如下
+## 解答如下
 使用HCL创建并启动设备以后，输入命令
 
 ```CLI
