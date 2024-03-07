@@ -54,6 +54,7 @@ Y ##确认
 
 ## PC配置如下
 ![PC配置](https://p.ananas.chaoxing.com/star3/origin/257b206f021d0de55b876486da7ef4bd.png)
+<br>
 右键打开命令行，打几行回车
 ```CLI
 telnet 10.1.23.1
@@ -62,10 +63,11 @@ telnet 10.1.23.1
 
 登录完成后
 ```CLI
-system-view
-display current-configuration
+system-view ##进入系统试图
+display current-configuration ##显示当前配置信息
 ```
 ![作业](https://p.ananas.chaoxing.com/star3/origin/0637cb2115f87bea1fe177296b15e3e2.png)
+
 再次输入几行空格，打印其余输出<br>
 ![其余输出](https://p.ananas.chaoxing.com/star3/origin/c4862f4872e9c69ae4bd1b531dc43ecf.png)
 -------------
