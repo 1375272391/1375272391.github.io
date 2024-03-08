@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "H3C ssh 作业"
+author: XM137
+date:   2024-03-08 23:51:00 +0800
+categories: Daily
+tags: H3C HCL
+---
+
+# 鉴于`ssh`作业仍未开始，所以只有参考命令
+
+## ssh配置如下
+```CLI
+system-view ## 系统视图
+sysname xxx ## 主机名
+public-key local create rsa ## 为ssh生成RSA密钥对，直接输入回车即可
+ssh server enable ## 启用ssh服务
+interface GigabitEthernet x/x ##进入相应接口试图
+ip address xxx.xxx.xxx.xxx xx ##为相应接口配置IP地址
+quit
+line vty 0 63 ## 进入 vty 端口
+authentication-mode scheme ## 设置认证模式为用户名密码模式
+protocol inbound ssh ## ssh 协议绑定
+quit
+local-user xxx ## 创建账户xxx
+password simple xxxxxxxxxx ## 为创建账户设置密码
+service-type ssh ## 设置服务模式为 ssh
+authorization-attribute user-role network-admin ##为创建账户分配用户角色
+quit
+```
+## PC 连接
+PC直接右键配置填入相关配置<br>
+PC使用 `ssh2` 链接<br>
+命令行如下<br>
+```CLI
+ssh2 xxx.xxx.xxx.xxx
+```
+输入完用户名密码后，还需要再分行输入两个Y <br>
+成功以后,可以直接 <br>
+```CLI
+display current-configuration
+```

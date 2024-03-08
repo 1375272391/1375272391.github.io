@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "H3C 作业"
+title:  "H3C Telnet 作业"
 author: XM137
 date:   2024-03-07 23:00:00 +0800
 categories: Daily
@@ -38,8 +38,8 @@ sysname xxx  ##根据需要将xxx修改后执行
 interface GigabitEthernet 0/1 ##进入G 0/1 口
 ip address 10.1.23.1 28 ##根据题目要求设置IP地址及子网掩码
 quit
-telnet server enable ##启动telnet服务
-line vty 0 4 ##进入vty接口
+telnet server enable ##启用telnet服务
+line vty 0 4 ##进入vty接口 并设置0-4 共计5个用户
 authentication-mode scheme ##修改认证模式为用户名密码认证
 quit
 local-user xxx ##创建账户xxx
@@ -55,7 +55,7 @@ Y ##确认
 ## PC配置如下
 ![PC配置](https://p.ananas.chaoxing.com/star3/origin/257b206f021d0de55b876486da7ef4bd.png)
 <br>
-右键打开命令行，打几行回车
+右键PC打开命令行，键盘敲几行回车<br>
 ```CLI
 telnet 10.1.23.1
 ```
@@ -69,5 +69,6 @@ display current-configuration ##显示当前配置信息
 ![作业](https://p.ananas.chaoxing.com/star3/origin/0637cb2115f87bea1fe177296b15e3e2.png)
 
 再次输入几行空格，打印其余输出<br>
+
 ![其余输出](https://p.ananas.chaoxing.com/star3/origin/c4862f4872e9c69ae4bd1b531dc43ecf.png)
 -------------
