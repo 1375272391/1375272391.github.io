@@ -80,6 +80,7 @@ PC使用 `ssh2` 连接<br>
 ssh2 21.53.1.1
 ```
 输入完用户名密码后，还需要再分行输入两个Y <br>
+![0308](/assets/Daily-image/20240308/0308.png)
 成功以后,可以直接 <br>
 ```CLI
 display current-configuration
