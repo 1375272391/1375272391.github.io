@@ -56,8 +56,8 @@ Y ##确认
 ![PC配置](https://p.ananas.chaoxing.com/star3/origin/257b206f021d0de55b876486da7ef4bd.png)
 <br>
 右键PC打开命令行，键盘敲几行回车<br>
-:::warning 提示
-谁tm再说输入密码没有显示，直接***
+:::warning
+谁tm再说输入密码没有显示，直接**
 :::
 
 ```CLI
