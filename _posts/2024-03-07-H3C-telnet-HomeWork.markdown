@@ -33,18 +33,18 @@ tags: H3C HCL
 使用HCL创建并启动设备以后，输入命令
 
 ```CLI
-system-view  ##使用该命令进入系统视图
-sysname xxx  ##根据需要将xxx修改后执行
-interface GigabitEthernet 0/1 ##进入G 0/1 口
-ip address 10.1.23.1 28 ##根据题目要求设置IP地址及子网掩码
+system-view  ## 使用该命令进入系统视图
+sysname xxx  ## 根据需要将xxx修改后执行
+interface GigabitEthernet 0/1 ## 进入G 0/1 口
+ip address 10.1.23.1 28 ## 根据题目要求设置IP地址及子网掩码
 quit
-telnet server enable ##启用telnet服务
-line vty 0 4 ##进入vty接口 并设置0-4 共计5个用户
-authentication-mode scheme ##修改认证模式为用户名密码认证
+telnet server enable ## 启用telnet服务
+line vty 0 4 ## 进入vty接口 并设置0-4 共计5个用户
+authentication-mode scheme ## 修改认证模式为用户名密码认证
 quit
-local-user xxx ##创建账户xxx
-password simple xxxxxxxxxx ##设置密码，至少10位，至少包含一个字母
-service-type telnet ##设置服务模式为telnet
+local-user xxx ## 创建账户 xxx
+password simple xxxxxxxxxx ## 设置密码，至少10位，至少包含一个字母
+service-type telnet # #设置服务模式为telnet
 authorization-attribute user-role network-admin ##设置用户角色
 quit
 save ##保存
@@ -67,8 +67,8 @@ telnet 10.1.23.1
 
 登录完成后
 ```CLI
-system-view ##进入系统试图
-display current-configuration ##显示当前配置信息
+system-view ## 进入系统试图
+display current-configuration ## 显示当前配置信息
 ```
 ![作业](https://p.ananas.chaoxing.com/star3/origin/0637cb2115f87bea1fe177296b15e3e2.png)
 

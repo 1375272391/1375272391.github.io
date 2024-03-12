@@ -41,7 +41,7 @@ sysname xxx+01 ## 主机名
 public-key local create rsa ## 为ssh生成RSA密钥对，直接输入回车即可
 ssh server enable ## 启用ssh服务
 interface GigabitEthernet 0/0 ##进入相应接口试图
-ip address 21.53.1.1 28 ##为相应接口配置IP地址
+ip address 21.53.1.1 28 ## 为相应接口配置IP地址
 quit
 line vty 0 63 ## 进入 vty 端口
 authentication-mode scheme ## 设置认证模式为用户名密码模式
@@ -50,7 +50,7 @@ user-role network-admin ## 为 vty 分配管理员权限
 undo user-role network-operator ## 撤销 vty 的操作员权限
 quit
 local-user xxx class manage ## 创建账户 xxx 并使用 class 分配管理权限
-password simple xxxxxxxxxx ## 为创建账户设置密码 至少10位，至少包含一个字母
+password simple xxxxxxxxxx ## 为创建账户设置密码 至少10位，且至少包含一个字母
 service-type ssh ## 设置服务模式为 ssh
 authorization-attribute user-role network-admin ##为创建账户分配管理员角色
 quit
@@ -58,15 +58,15 @@ quit
 ## PC 连接
 作业要求使用路由器作为PC使用
 路由02配置IP方式与路由01保持一致<br>
- `IP` 地址不同<br>
+ `IP 地址` 不同<br>
 
 ```CLI
 system-view ## 系统视图
 sysname xxx+02 ## 设置第二台路由主机名
-interface GigabitEthernet 0/0 ##进入相应接口试图
-ip address 21.53.1.2 28 ##为相应接口配置IP地址
+interface GigabitEthernet 0/0 ## 进入相应接口试图
+ip address 21.53.1.2 28 ## 为相应接口配置IP地址
 quit ## 退出到系统视图
-quit ##退出到用户视图
+quit ## 退出到用户视图
 ```
 
 PC使用 `ssh2` 连接<br>
@@ -83,5 +83,5 @@ ssh2 21.53.1.1
 ![0308](/assets/Daily-image/20240308/0308.png)
 成功以后,可以直接 <br>
 ```CLI
-display current-configuration
+display current-configuration ## 显示当前配置信息
 ```
