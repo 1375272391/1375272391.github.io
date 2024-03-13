@@ -20,7 +20,7 @@ tags: Web
 > 
 > 4.请上传完整的代码和效果图。
 >
-```HTML
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -50,5 +50,4 @@ tags: Web
 		</p>
 	</body>
 </html>
-
-```
+{% endhighlight %}
