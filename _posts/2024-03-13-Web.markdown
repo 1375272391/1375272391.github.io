@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Web 作业"
+author: XM137
+date:   2024-03-13 18:56:00 +0800
+categories: Daily
+tags: Web 
+---
+## 题目如下
+>请做出以下效果，并在浏览器测试，效果如下图所示：
+>
+![image](https://p.ananas.chaoxing.com/star3/origin/ecd9d0b7d87d5477994aa898eebfa005.png)
+> 要求如下：
+> 
+> 1、诗的标题格式为一级标题、红色、居中显示；
+> 
+> 2、作者格式为二级标题、斜体、居中显示；
+> 
+> 3、诗的内容格式为段落，诗的第二行和第四行内容为蓝色字体。
+> 
+> 4.请上传完整的代码和效果图。
+>
+```HTML
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>城东早春</title>
+	</head>
+	<body>
+		<h1 align="center">
+			<font color="red">
+			城东早春
+			</font>
+		</h1>
+		<h2 align="center">
+			<i>
+			作者：杨巨源
+			</i>
+		</h2>
+		<p align="center">
+			诗家清景在新春，<br />
+		<font color="blue">
+			绿柳才黄半未匀。<br />
+		</font>
+			若待上林花似锦，<br />
+		<font color="blue">
+			出门俱是看花人。<br />
+		</font>
+		</p>
+	</body>
+</html>
+
+```
