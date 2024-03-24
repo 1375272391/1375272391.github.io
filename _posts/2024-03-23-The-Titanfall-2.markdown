@@ -8,7 +8,7 @@ tags: Gaming Titan Titanfall2
 ---
 一段开始，一段结束
 ![](/assets/Daily-image/20240323/屏幕截图%202024-03-23%20214254.png)<br>
-![](/assets/Daily-image/20240323/20240323%202123.jpg)<br>
+![](/assets/Daily-image/20240323/2.jpg)<br>
 ![](/assets/Daily-image/20240323/3.jpg)<br>
 "库伯：我不知道...有新的泰坦是什么感觉...我还是喜欢这台旧的。" <br>
 是啊，我也挺喜欢的<br>
@@ -24,7 +24,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Daily-image/20240323/11.jpg)<br>
 ![](/assets/Daily-image/20240323/12.jpg)<br>
 ![](/assets/Daily-image/20240323/13.jpg)<br>
-11个小时的游戏，仅仅玩了两天<br>
+仅仅11个小时的游戏时间<br>
 通关的那一刻，仿佛失去了所有<br>
 是啊，BT没了<br>
 失去之物，总是如此重要<br>
