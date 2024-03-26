@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "H3C DHCP"
+author: XM137
+date:   2024-03-26 19:49:00 +0800
+categories: Daily
+tags: H3C DHCP
+---
+> 按照拓扑配置实验。
+> 
+![](https://p.ananas.chaoxing.com/star3/origin/8a9372e07f375abb961e5774acca6ee4.png)
+> 
+> 要求：
+> 
+> 按照拓扑在HCL模拟器中连接设备（10分）
+> 
+> 设备名称应更改为自己的姓名首字母（10分）
+> 
+> 做好地址规划：
+> 
+> 网段：10.32.1.0/24
+> 
+> 网关：10.32.1.254
+> 
+> DNS：10.32.1.1
+> 
+> 可分配用户地址段：10.32.1.2-253
+> 
+> 不可分配地址段:网关和DNS
+> 
+> 4.配置相关实验.（65分）
+> 
+> 5将所有配置命令截图上传，包括拓扑图，路由器配置，终端操作，测试结果等。（15分）
+
+
+{% highlight cli %}
+system-view  ## 进入系统视图
+sysname xxx+n  ## 设置主机名
+dhcp enable  ## 启用DHCP
+dhcp server ip-pool 0  ## 配置DHCP池
+network 10.32.1.0 mask 255.255.255.0  ## 配置DHCP网络地址和掩码
+gateway-list 10.32.1.254  ## 配置DHCP池网关地址
+dns-list 10.32.1.1  ## 配置DHCP池DNS
+expired day 7  ## 配置DHCP租约过期
+quit  ## 退回系统视图
+dhcp server forbidden-ip 10.32.1.1  ## 配置DHCP池不允许分配的IP地址
+dhcp server forbidden-ip 10.32.1.254　　## 同上，网关地址不允分配给主机使用
+interface GigabitEthernet 0/0  ## 进入0/0端口
+ip address 10.32.1.254 24 ## 设置IP地址及掩码
+dhcp server apply ip-pool 0 ## 在0/0接口上应用DHCP地址池
+quit ## 退回系统视图
+display dhcp server free-ip  ## 显示剩余IP
+display dhcp server pool ##查看DHCP地址池
+display dhcp server statistics  ## 查看DHCP服务状态
+display dhcp server ip-in-use ## 显示在用IP地址
+{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
