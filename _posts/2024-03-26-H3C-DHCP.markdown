@@ -42,13 +42,13 @@ gateway-list 10.32.1.254  ## 配置DHCP池网关地址
 dns-list 10.32.1.1  ## 配置DHCP池DNS
 expired day 7  ## 配置DHCP租约过期
 quit  ##  退回系统视图
-save force ##  强制保存配置
 dhcp server forbidden-ip 10.32.1.1  ## 配置DHCP池不允许分配的IP地址
 dhcp server forbidden-ip 10.32.1.254  ## 同上，网关地址不允分配给主机使用
 interface GigabitEthernet 0/0  ## 进入0/0端口
 ip address 10.32.1.254 24  ## 设置IP地址及掩码
 dhcp server apply ip-pool 0  ## 在0/0接口上应用DHCP地址池
 quit ## 退回系统视图
+save force ##  强制保存配置
 ps:以下命令请根据需要选择是否使用
 display dhcp server free-ip  ## 显示剩余IP
 display dhcp server pool ##查看DHCP地址池
