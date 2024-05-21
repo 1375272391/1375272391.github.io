@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "发新书"
+author: XM137
+date:   2023-09-20 13:18:00 +0800
+categories: Daily
+tags: 发书
+---
+![IMG_20230920_131858.jpg](/assets/Daily-image/20230920/IMG_20230920_131858.jpg)

@@ -1,0 +1,176 @@
+---
+layout: post
+title:  "作业22：OSPF实验"
+author: XM137
+date:   2024-05-14 22:12:00 +0800
+categories: Daily
+tags: H3C HCL OSPF
+---
+
+# 题目
+
+> 按照拓扑链接设备，实现全网互通。
+> 
+> 要求：
+> 
+> 1.设备名称按要求更名为RT1-XXX，XXX代表姓名首字母。
+> 
+> 2.loopback地址使用Router ID，默认设备的loopback0，配置IP地址
+> 
+> 3.使用OSPF动态路由协议，可局部采用静态路由。
+> 
+> 4.loopback写入OSPF网络发布区域。
+> 
+> 5.所有配置截图上传（实质性配置）
+> 
+> 6.测试结果上传，内容包含拓扑图上的测试要求。
+> 
+> 注意;RT1的G0/0口属于Area100
+> 
+> 网段掩码为30位的，使能ospf时，使用准确IP地址。例如172.16.1.0/30
+> 
+> network 172.16.1.1 0.0.0.0
+> 
+> network 172.16.1.2 0.0.0.0
+![](https://p.ananas.chaoxing.com/star3/origin/2c47270351c53e92d6a068a3a5058e0d.png)
+
+## RT5
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT5-ZXB
+[RT5-ZXB]int l 0 ## 进入回环接口
+[RT5-ZXB-LoopBack0]ip a 5.5.5.5 32 ##设置回环接口地址
+[RT5-ZXB-LoopBack0]in g6/0
+[RT5-ZXB-GigabitEthernet6/0]ip a 10.10.1.1 24
+[RT5-ZXB-GigabitEthernet6/0]in g0/0
+[RT5-ZXB-GigabitEthernet0/0]ip a 172.16.1.2 30
+[RT5-ZXB-GigabitEthernet0/0]qu
+[RT5-ZXB]ospf router-id 5.5.5.5 ## 设置OSPF同时指定路由ID
+[RT5-ZXB-ospf-1]import-route d ##导入直连路由
+[RT5-ZXB-ospf-1]a 100
+[RT5-ZXB-ospf-1-area-0.0.0.100]n 5.5.5.5 0.0.0.0 ## 回环地址使能OSPF
+[RT5-ZXB-ospf-1-area-0.0.0.100]n 172.16.1.2 0.0.0.0 ## 在指定地址使能OSPF
+{% endhighlight %}
+
+## RT1
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT1-ZXB
+[RT1-ZXB]int l 0
+[RT1-ZXB-LoopBack0]ip a 1.1.1.1 32
+[RT1-ZXB-LoopBack0]in g0/0
+[RT1-ZXB-GigabitEthernet0/0]ip a 172.16.1.1 30
+[RT1-ZXB-GigabitEthernet0/0]in g0/1
+[RT1-ZXB-GigabitEthernet0/1]ip a 172.16.2.1 30
+[RT1-ZXB-GigabitEthernet0/1]in g0/2
+[RT1-ZXB-GigabitEthernet0/2]ip a 172.16.3.1 30
+[RT1-ZXB-GigabitEthernet0/2]in g5/0
+[RT1-ZXB-GigabitEthernet5/0]ip a 7.14.10.1 30
+[RT1-ZXB-GigabitEthernet5/0]qu
+[RT1-ZXB]ospf router-id 1.1.1.1
+[RT1-ZXB-ospf-1]a 0
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 1.1.1.1 0.0.0.0
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 7.14.10.1 0.0.0.0
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 172.16.2.1 0.0.0.0
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 172.16.3.1 0.0.0.0
+[RT1-ZXB-ospf-1-area-0.0.0.0]a 100
+[RT1-ZXB-ospf-1-area-0.0.0.100]n 172.16.1.1 0.0.0.0
+{% endhighlight %}
+
+## SW1
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn SW1-ZXB
+[SW1-ZXB]v 100 ##创建VLAN
+[SW1-ZXB-vlan100]port g1/0/1 ## 加入端口至当前配置VLAN
+[SW1-ZXB-vlan100]int v 100 ## 进入VLAN接口
+[SW1-ZXB-Vlan-interface100]ip a 7.14.10.2 30 ##配置地址
+[SW1-ZXB-Vlan-interface100]v 20
+[SW1-ZXB-vlan20]port g1/0/3
+[SW1-ZXB-vlan20]int v 20
+[SW1-ZXB-Vlan-interface20]ip a 132.18.56.254 24
+[SW1-ZXB-Vlan-interface20]qu
+[SW1-ZXB]ospf ##开启OSPF
+[SW1-ZXB-ospf-1]import-route d
+[SW1-ZXB-ospf-1]a 0
+[SW1-ZXB-ospf-1-area-0.0.0.0]n 7.14.10.2 0.0.0.0
+{% endhighlight %}
+
+## RT2
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT2-ZXB
+[RT2-ZXB]int l 0
+[RT2-ZXB-LoopBack0]ip a 2.2.2.2 32
+[RT2-ZXB-LoopBack0]in g0/1
+[RT2-ZXB-GigabitEthernet0/1]ip a 172.16.2.2 30
+[RT2-ZXB-GigabitEthernet0/1]int g6/0
+[RT2-ZXB-GigabitEthernet6/0]ip a 172.16.50.1 24
+[RT2-ZXB-GigabitEthernet6/0]qu
+[RT2-ZXB]ospf router-id 2.2.2.2
+[RT2-ZXB-ospf-1]import-route d
+[RT2-ZXB-ospf-1]a 0
+[RT2-ZXB-ospf-1-area-0.0.0.0]n 2.2.2.2 0.0.0.0
+[RT2-ZXB-ospf-1-area-0.0.0.0]n 172.16.2.2 0.0.0.0
+{% endhighlight %}
+
+## RT3
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT3-ZXB
+[RT3-ZXB]int l 0
+[RT3-ZXB-LoopBack0]ip a 3.3.3.3 32
+[RT3-ZXB-LoopBack0]in g0/2
+[RT3-ZXB-GigabitEthernet0/2]ip a 172.16.3.2 30
+[RT3-ZXB-GigabitEthernet0/2]in g6/0
+[RT3-ZXB-GigabitEthernet6/0]ip a 172.16.4.1 24
+[RT3-ZXB-GigabitEthernet6/0]in g0/0
+[RT3-ZXB-GigabitEthernet0/0]ip a 10.0.1.1 30
+[RT3-ZXB]ospf router-id 3.3.3.3
+[RT3-ZXB-ospf-1]import-route d
+[RT3-ZXB-ospf-1]a 0
+[RT3-ZXB-ospf-1-area-0.0.0.0]n 3.3.3.3 0.0.0.0
+[RT3-ZXB-ospf-1-area-0.0.0.0]n 172.16.3.2 0.0.0.0
+[RT3-ZXB-ospf-1-area-0.0.0.0]n 172.16.4.1 0.0.0.0
+[RT3-ZXB-ospf-1-area-0.0.0.0]a 50
+[RT3-ZXB-ospf-1-area-0.0.0.50]n 10.0.1.1 0.0.0.0
+{% endhighlight %}
+
+## RT4
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT4-ZXB
+[RT4-ZXB]int l 0
+[RT4-ZXB-LoopBack0]ip a 4.4.4.4 32
+[RT4-ZXB-LoopBack0]in g0/0
+[RT4-ZXB-GigabitEthernet0/0]ip a 10.0.1.2 30
+[RT4-ZXB-GigabitEthernet0/0]in g6/0
+[RT4-ZXB-GigabitEthernet6/0]ip a 192.168.60.1 24
+[RT4-ZXB]ospf router-id 4.4.4.4
+[RT4-ZXB-ospf-1]import-route d
+[RT4-ZXB-ospf-1]a 50
+[RT4-ZXB-ospf-1-area-0.0.0.50]n 4.4.4.4 0.0.0.0
+[RT4-ZXB-ospf-1-area-0.0.0.50]n 10.0.1.2 0.0.0.0
+{% endhighlight %}
+
+## PC地址表
+
+|     PC      |     IP地址     |      子网掩码      |        网关       |     
+|   :----:    |     :----:     |       :----:      |       :----:      |
+|    PC_7     |    10.10.1.2   |   255.255.255.0   |      10.10.1.1    |
+|    PC_8     |   172.16.50.2  |   255.255.255.0   |     172.16.50.1   |
+|    PC_9     |   172.16.4.2   |   255.255.255.0   |     172.16.4.1    |   
+|    PC_10    |  192.168.60.2  |   255.255.255.0   |    192.168.60.1   |   
+|    PC_11    |   132.18.56.2  |   255.255.255.0   |    132.18.56.254  |  
+
+
+## PC11 ping测试
+{% highlight cli %}
+ping 10.10.1.2
+ping 172.16.50.2
+ping 172.16.4.2
+ping 192.168.60.2
+{% endhighlight %}
+
+### 测试结果
+![](https://p.ananas.chaoxing.com/star3/origin/8a41e135204ea32115bee9f3dfa58df0.png)

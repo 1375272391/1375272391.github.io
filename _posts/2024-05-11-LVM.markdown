@@ -1,0 +1,124 @@
+---
+layout: post
+title:  "项目五 作业四 逻辑卷LVM配置"
+author: XM137
+date:   2024-05-11 23:08:00 +0800
+categories: Daily
+tags: CentOS7 LVM
+---
+
+# 题目
+> 1. (简答题)
+> 将两块4G的硬盘/dev/sdb,/dev/sdc建立物理卷、卷组、逻辑卷，支持LVM技术，进行下列操作：
+> 
+> 先切割一个150MB左右的逻辑卷设备（提交命令lvs和df -h的截图）
+> 
+> 再将逻辑卷扩展至300MB（提交命令lvs和df -h的截图）
+> 
+> 再将逻辑卷的容量减小到100MB（提交命令lvs和df -h的截图）
+> 
+> 注意：共提交六张截图，每一小题标好序号，注意不同小题之间的区分！！
+
+## 1、创建逻辑卷
+### 分区&&设置分区ID
+{% highlight cli %}
+fdisk /dev/sdb
+n
+回车
+回车
+回车
+回车
+t
+8e ## 设置分区ID为 Linux LVM
+w ## 保存分区表
+{% endhighlight %}
+{% highlight cli %}
+fdisk /dev/sdc
+n
+回车
+回车
+回车
+回车
+t
+8e
+w
+{% endhighlight %}
+
+### LVM创建物理卷
+```CLI
+pvcreate /dev/sdb1 /dev/sdc1
+```
+### LVM创建卷组
+```CLI
+vgcreate storage /dev/sdb1 /dev/sdc1
+```
+### LVM创建逻辑卷&指定大小
+```CLI
+lvcreate -L 150M -n v0 storage
+```
+### 格式化
+```CLI
+mkfs -t ext4 /dev/storage/v0
+```
+### 创建挂载点
+```CLI
+mkdir /mnt/v0
+```
+### 挂载
+```CLI
+mount /dev/storage/v0 /mnt/v0
+```
+
+### 查看LVM逻辑卷&挂载情况
+```CLI
+lvs
+df -h
+```
+### 两条命令请分别截图提交
+
+
+## 2、拓展分区
+### 拓展逻辑卷至300M
+```CLI
+lvextend -L 300M /dev/storage/v0
+```
+### 重新调整分区大小
+```CLI
+resize2fs /dev/storage/v0
+```
+### 查看LVM逻辑卷&挂载情况
+```CLI
+lvs
+df -h
+```
+### 两条命令请分别截图提交
+
+
+## 3、缩小LVM逻辑分区
+### 卸载分区
+```CLI
+umount /dev/storage/v0
+```
+### 检查&清空 Buffer Cache
+```CLI
+e2fsck -f /dev/storage/v0
+```
+### 调整分区大小为100M
+```CLI
+resize2fs /dev/storage/v0 100M
+```
+### 缩小逻辑卷至100M
+```CLI
+lvreduce -L 100M /dev/storage/v0
+y ## 输入"y" 确认缩小逻辑卷
+```
+### 再次挂载分区
+```CLI
+mount /dev/storage/v0 /mnt/v0
+```
+### 查看LVM逻辑卷&挂载情况
+```CLI
+lvs
+df -h
+```
+### 两条命令请分别截图提交

@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "项目五 作业三 RAID配置"
+author: XM137
+date:   2024-05-09 16:58:00 +0800
+categories: Daily
+tags: CentOS7 RAID RAID5
+---
+# 题目
+> 操作题
+> 
+> 现有5块同一厂家、容量均为2G的SCSI硬盘。要求在这5块硬盘上创建RAID5卷，以实现磁盘容错。
+> 
+> 1）      四个硬盘组成RAID5，挂载到/mnt/raid目录下
+> 
+> 2）      另一个硬盘备用
+>
+> 提交要求：提交  mdadm  --detail /dev/md0 的返回结果截图和 df -h的返回结果截图
+
+## 创建分区&修改分区ID
+### 分别对以下磁盘
+{% highlight cli %}
+fdisk /dev/sdb
+fdisk /dev/sdc
+fdisk /dev/sdd
+fdisk /dev/sde
+fdisk /dev/sdf
+{% endhighlight %}
+### 执行以下命令
+{% highlight cli %}
+n
+p
+1
+回车
+回车
+t
+fd
+w
+{% endhighlight %}
+
+## 检查分区
+{% highlight cli %}
+fdisk -l | grep fd ##查看5个分区是否存在
+{% endhighlight %}
+![](/assets/Daily-image/20240509/image1.png)
+
+## 创建RAID5
+{% highlight cli %}
+mdadm --create /dev/md0 --level=5 --raid-devices=4 --spare-devices=1 /dev/sdb1 /dev/sdc1 /dev/sdd1 /dev/sde1 /dev/sdf1
+{% endhighlight %}
+![](/assets/Daily-image/20240509/image2.png)
+
+## 格式化
+{% highlight cli %}
+mkfs -t ext4 /dev/md0
+{% endhighlight %}
+
+## 查看详情
+{% highlight cli %}
+mdadm --detail /dev/md0
+{% endhighlight %}
+![](/assets/Daily-image/20240509/image3.png)
+### 这条命令执行完后需截图
+
+## 创建挂载点
+{% highlight cli %}
+mkdir /mnt/raid
+{% endhighlight %}
+
+## 挂载RAID
+{% highlight cli %}
+mount /dev/md0 /mnt/raid
+{% endhighlight %}
+
+## 查看分区挂载
+{% highlight cli %}
+df -h
+{% endhighlight %}
+![](/assets/Daily-image/20240509/image4.png)
+### 这一条也需截图
