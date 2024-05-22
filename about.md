@@ -1,18 +1,16 @@
 ---
-layout: page
-title: About
-permalink: /about/
+layout: about
+title: 关于作者
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+<h2>关于</h2>
+<p>Github Page && Jekyll && Yat Theme</p>
+<p>同时感谢CF</p>
+<p>作者昵称 熊猫 </p>
+<p>XM137由来:取作者Q简拼加前三位</p>
+<p>作者绿泡泡：xm1375272391 </p>
+<p>作者企鹅号：1375272391</p>
+<p>加好友请说明来意</p>
+<p>若要参考什么的，请随意</p>
+<p>拒绝精神内耗，从现在开始，拥抱美好人生，从行动开始</p>
+<p>作者班级: 计网234</p>
