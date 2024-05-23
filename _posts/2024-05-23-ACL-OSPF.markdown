@@ -10,7 +10,7 @@ tags: H3C HCL OSPF ACL
 # 题目
 > 按照拓扑，完成作业实现互通与访问限制。截图上传全部配置。
 
-!()[https://p.ananas.chaoxing.com/star3/origin/58da41f96bce4589b222936d06990779.png]
+![](https://p.ananas.chaoxing.com/star3/origin/58da41f96bce4589b222936d06990779.png)
 
 
 ## SW1
@@ -115,7 +115,7 @@ ping 33.12.10.100
 10.10.2.2
 ##仅有 33.12.10.100 才能成功
 {% endhighlight %}
-!()[https://p.ananas.chaoxing.com/star3/origin/84846ead39f4fbe672d3850fe3444004.png]
+![](https://p.ananas.chaoxing.com/star3/origin/84846ead39f4fbe672d3850fe3444004.png)
 
 ## 管理区 PC6 Telnet 测试
 {% highlight cli %}
@@ -124,21 +124,21 @@ telnet 10.10.2.2
 dis cu 
 ##之后退出即可
 {% endhighlight %}
-!()[https://p.ananas.chaoxing.com/star3/origin/a73e3bf1b979619d5e071ce6ffabb3d7.png]
+![](https://p.ananas.chaoxing.com/star3/origin/a73e3bf1b979619d5e071ce6ffabb3d7.png)
 
 ## 服务区 Telne t测试
 {% highlight cli %}
 telnet 10.10.2.2
 ##你要是连上了，那真...
 {% endhighlight %}
-!()[https://p.ananas.chaoxing.com/star3/origin/06ca13ca8408a59de91ca5719ff7296e.png]
+![](https://p.ananas.chaoxing.com/star3/origin/06ca13ca8408a59de91ca5719ff7296e.png)
 
 # 以下地址 ping 测试应全通
 ## 管理区PC6测试
 {% highlight cli %}
 ping 33.12.10.100
 {% endhighlight %}
-!()[https://p.ananas.chaoxing.com/star3/origin/42a8554e3ff7f3e82862c5e45aff7d5f.png]
+![](https://p.ananas.chaoxing.com/star3/origin/42a8554e3ff7f3e82862c5e45aff7d5f.png)
 
 ## 服务区测试
 {% highlight cli %}
@@ -146,4 +146,4 @@ ping 172.16.20.10
 ping 172.16.30.10
 ping 10.10.2.2
 {% endhighlight %}
-!()[https://p.ananas.chaoxing.com/star3/origin/c6cf3e497c2b77a006ac05411feb01ad.png]
+![](https://p.ananas.chaoxing.com/star3/origin/c6cf3e497c2b77a006ac05411feb01ad.png)
