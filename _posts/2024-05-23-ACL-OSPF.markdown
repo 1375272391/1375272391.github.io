@@ -7,7 +7,7 @@ categories: Daily
 tags: H3C HCL OSPF ACL
 ---
 
-# 题目
+## 题目
 > 按照拓扑，完成作业实现互通与访问限制。截图上传全部配置。
 
 ![](https://p.ananas.chaoxing.com/star3/origin/58da41f96bce4589b222936d06990779.png)
@@ -48,7 +48,6 @@ tags: H3C HCL OSPF ACL
 [SW1-ZXB-acl-ipv4-adv-3000]acl a 3001
 [SW1-ZXB-acl-ipv4-adv-3001]rule 5 deny ip source 172.16.10.0 0.0.0.255 destination 172.16.30.0 0.0.0.255
 [SW1-ZXB-acl-ipv4-adv-3001]rule 10 deny ip source 172.16.20.0 0.0.0.255 destination 172.16.30.0 0.0.0.255
-[SW1-ZXB-acl-ipv4-adv-3001]
 [SW1-ZXB-acl-ipv4-adv-3001]int v 100
 [SW1-ZXB-Vlan-interface100]packet-filter 3000 outbound 
 [SW1-ZXB-Vlan-interface100]int v 30
@@ -133,7 +132,7 @@ telnet 10.10.2.2
 {% endhighlight %}
 ![](https://p.ananas.chaoxing.com/star3/origin/06ca13ca8408a59de91ca5719ff7296e.png)
 
-# 以下地址 ping 测试应全通
+## 以下地址 ping 测试应全通
 ## 管理区PC6-服务区测试
 {% highlight cli %}
 ping 33.12.10.100
