@@ -117,7 +117,7 @@ ACL匹配到一条规则后，停止匹配
 |    PC_8     |  172.16.10.10  |   255.255.255.0   |    172.16.10.1    |   
 |  服务区PC    |  33.12.10.100  |   255.255.255.0   |    33.12.10.1    |   
 
-## 访客区PC8-其他区域 ping 测试
+## 访客区PC8-->其他区域 ping 测试
 {% highlight cli %}
 ping 33.12.10.100
 172.16.30.10
@@ -126,7 +126,7 @@ ping 33.12.10.100
 {% endhighlight %}
 ![](https://p.ananas.chaoxing.com/star3/origin/84846ead39f4fbe672d3850fe3444004.png)
 
-## 管理区PC6-管理区路由 Telnet 测试
+## 管理区PC6-->管理区路由 Telnet 测试
 {% highlight cli %}
 telnet 10.10.2.2
 ##输入你设置的用户名密码
@@ -135,7 +135,7 @@ dis cu
 {% endhighlight %}
 ![](https://p.ananas.chaoxing.com/star3/origin/a73e3bf1b979619d5e071ce6ffabb3d7.png)
 
-## 服务区-管理区路由 Telnet 测试
+## 服务区-->管理区路由 Telnet 测试
 {% highlight cli %}
 telnet 10.10.2.2
 ##你要是连上了，那真...
@@ -143,13 +143,13 @@ telnet 10.10.2.2
 ![](https://p.ananas.chaoxing.com/star3/origin/06ca13ca8408a59de91ca5719ff7296e.png)
 
 ## 以下地址 ping 测试应全通
-## 管理区PC6-服务区测试
+## 管理区PC6-->服务区测试
 {% highlight cli %}
 ping 33.12.10.100
 {% endhighlight %}
 ![](https://p.ananas.chaoxing.com/star3/origin/42a8554e3ff7f3e82862c5e45aff7d5f.png)
 
-## 服务区-其他区域测试
+## 服务区-->其他区域测试
 {% highlight cli %}
 ping 172.16.20.10
 ping 172.16.30.10
