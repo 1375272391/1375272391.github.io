@@ -2,7 +2,7 @@
 layout: post
 title:  "作业26：NAT实验-Static版"
 author: XM137
-date:   2024-05-28 13:30:00 +0800
+date:   2024-05-28 13:50:00 +0800
 categories: Daily
 tags: H3C HCL Static NAT
 ---
