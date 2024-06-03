@@ -5,6 +5,8 @@ title: 关于作者
 
 <h2>关于</h2>
 <p>Github Page && Jekyll && Yat Theme</p>
+# XM137 <Badge type="warning" text="大一在读手残党" />
+![An image](http://q1.qlogo.cn/g?b=qq&nk=1375272391&s=160)
 <p>同时感谢CF</p>
 <p>作者昵称 熊猫 </p>
 <p>XM137由来:取作者Q简拼加前三位</p>
