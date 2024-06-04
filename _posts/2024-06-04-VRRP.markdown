@@ -94,37 +94,33 @@ ping 192.168.1.4
 
 ## RTA
 ```CLI
-在RTA上执行以下命令
-dis vrrp v
-查看VRRP状态
-应可以看到State为Master
+dis vrrp v ## 查看VRRP状态
+## 应可以看到State为Master
 ```
 
 ## RTB
 ```CLI
-dis vrrp v
-在RTB上应可以在State上看到Backup
+dis vrrp v ## 在RTB上应可以在State上看到Backup
 ```
 
 ## RTA
 ```CLI
-进入Master 路由 RTA 下联口
-in g0/1
+in g0/1 ## 进入Master 路由 RTA 下联口
 shutdown ## 关闭逻辑端口
-dis vrrp v
-此时应该可以看到State变为Initialize
+dis vrrp v ## 此时应该可以看到State变为Initialize
 ### 在关闭逻辑端口后，请稍作等待后，再进行ping测试
 ```
+![](https://p.ananas.chaoxing.com/star3/origin/6c6e6fe93cc982ee6f24c76dfe649697.png)
 
 ## RTB
 ```CLI
-再RTB上执行以下命令，查看VRRP状态
-dis vrrp v
-再RTB上此时State应为Master
+dis vrrp v ## 查看VRRP状态
+## 在RTB上此时State应为Master
 ```
+![](https://p.ananas.chaoxing.com/star3/origin/dd4af68d7994223f4f512d22e684f474.png)
 
-## ping测试
+## ping测试 PC5-->PC6
 ```CLI
-PC5-->PC6
 ping 192.168.1.4
 ```
+![](https://p.ananas.chaoxing.com/star3/origin/4f6f44a3d7e5fdee8a5888a456dbce42.png)
