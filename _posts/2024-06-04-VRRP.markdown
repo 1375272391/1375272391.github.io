@@ -32,6 +32,7 @@ tags: H3C HCL OSPF VRRP
 
 
 # RT
+{% highlight cli %}
 <H3C>sy
 [H3C]sysn RT-ZXB
 [RT-ZXB]i g6/0
@@ -46,8 +47,10 @@ tags: H3C HCL OSPF VRRP
 [RT-ZXB-ospf-1-area-0.0.0.0]n 10.1.1.1 0.0.0.0
 [RT-ZXB-ospf-1-area-0.0.0.0]q
 [RT-ZXB-ospf-1]i d
+{% endhighlight %}
 
 # RTA
+{% highlight cli %}
 <H3C>sy
 [H3C]sysn RTA-ZXB
 [RTA-ZXB]i g0/0
@@ -62,8 +65,10 @@ tags: H3C HCL OSPF VRRP
 [RTA-ZXB-GigabitEthernet0/1]vrrp vrid 1 virtual-ip 192.168.1.3
 [RTA-ZXB-GigabitEthernet0/1]vrrp vrid 1 priority 130
 [RTA-ZXB-GigabitEthernet0/1]vrrp vrid 1 preempt-mode
+{% endhighlight %}
 
 # RTB
+{% highlight cli %}
 <H3C>sy
 [H3C]sysn RTB-ZXB
 [RTB-ZXB]i g0/1
@@ -78,33 +83,46 @@ tags: H3C HCL OSPF VRRP
 [RTB-ZXB-GigabitEthernet0/2]vrrp vrid 1 virtual-ip 192.168.1.3 
 [RTB-ZXB-GigabitEthernet0/2]vrrp vrid 1 priority 110
 [RTB-ZXB-GigabitEthernet0/2]vrrp vrid 1 preempt-mode
+{% endhighlight %}
 
-PC5-->PC6
+# PC5-->PC6
+```CLI
 ping 192.168.1.4
+```
 
 ## RTA
+```CLI
 在RTA上执行以下命令
 dis vrrp v
 查看VRRP状态
 应可以看到State为Master
+```
 
 ## RTB
+```CLI
 dis vrrp v
 在RTB上应可以在State上看到Backup
+```
 
 ## RTA
+```CLI
 进入Master 路由 RTA 下联口
 in g0/1
 shutdown ## 关闭逻辑端口
 dis vrrp v
 此时应该可以看到State变为Initialize
 ### 在关闭逻辑端口后，请稍作等待后，再进行ping测试
+```
 
 ## RTB
+```CLI
 再RTB上执行以下命令，查看VRRP状态
 dis vrrp v
 再RTB上此时State应为Master
+```
 
-ping测试
+## ping测试
+```CLI
 PC5-->PC6
 ping 192.168.1.4
+```
