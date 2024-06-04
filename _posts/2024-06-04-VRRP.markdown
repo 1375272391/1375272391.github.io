@@ -111,6 +111,7 @@ dis vrrp v ## 此时应该可以看到State变为Initialize
 
 ### 在关闭逻辑端口后，请稍作等待后，再进行ping测试
 ![](https://p.ananas.chaoxing.com/star3/origin/6c6e6fe93cc982ee6f24c76dfe649697.png)
+![alt text](https://p.ananas.chaoxing.com/star3/origin/6c6e6fe93cc982ee6f24c76dfe649697.png)
 
 ## RTB
 {% highlight cli %}
