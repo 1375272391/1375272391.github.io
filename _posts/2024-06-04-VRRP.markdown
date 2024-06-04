@@ -12,7 +12,6 @@ tags: H3C HCL OSPF VRRP
 ![](https://p.ananas.chaoxing.com/star3/origin/9bc81822180900851ab1a876feb5c48b.png)
 
 
-> 
 > 2.要求：
 > 
 > 设备名称改为姓名首字母，例如zs-RTA
@@ -88,43 +87,43 @@ tags: H3C HCL OSPF VRRP
 {% endhighlight %}
 
 ## PC5-->PC6
-```CLI
+{% highlight cli %}
 ping 192.168.1.4
-```
+{% endhighlight %}
 
 ## RTA
-```CLI
+{% highlight cli %}
 dis vrrp v ## 查看VRRP状态
-## 应可以看到State为Master
-```
+应可以看到State为Master
+{% endhighlight %}
 
 ## RTB
-```CLI
+{% highlight cli %}
 dis vrrp v ## 在RTB上应可以在State上看到Backup
-```
+{% endhighlight %}
 
 ## RTA
-```CLI
+{% highlight cli %}
 in g0/1 ## 进入Master 路由 RTA 下联口
 shutdown ## 关闭逻辑端口
 dis vrrp v ## 此时应该可以看到State变为Initialize
-### 在关闭逻辑端口后，请稍作等待后，再进行ping测试
-```
+{% endhighlight %}
 
+### 在关闭逻辑端口后，请稍作等待后，再进行ping测试
 ![](https://p.ananas.chaoxing.com/star3/origin/6c6e6fe93cc982ee6f24c76dfe649697.png)
 
 ## RTB
-```CLI
+{% highlight cli %}
 dis vrrp v ## 查看VRRP状态
-## 在RTB上此时State应为Master
-```
+在RTB上此时State应为Master
+{% endhighlight %}
 
 ![](https://p.ananas.chaoxing.com/star3/origin/dd4af68d7994223f4f512d22e684f474.png)
 
 ## ping测试 PC5-->PC6
-```CLI
+{% highlight cli %}
 ping 192.168.1.4
-```
+{% endhighlight %}
 
 
 ![](https://p.ananas.chaoxing.com/star3/origin/4f6f44a3d7e5fdee8a5888a456dbce42.png)
