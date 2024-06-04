@@ -11,7 +11,9 @@ tags: H3C HCL OSPF VRRP
 
 >按照拓扑完成作业。
 >
+
 ![](https://p.ananas.chaoxing.com/star3/origin/9bc81822180900851ab1a876feb5c48b.png)
+
 > 
 > 2.要求：
 > 
@@ -33,7 +35,7 @@ tags: H3C HCL OSPF VRRP
 
 
 
-# RT
+## RT
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn RT-ZXB
@@ -51,7 +53,7 @@ tags: H3C HCL OSPF VRRP
 [RT-ZXB-ospf-1]i d
 {% endhighlight %}
 
-# RTA
+## RTA
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn RTA-ZXB
@@ -69,7 +71,7 @@ tags: H3C HCL OSPF VRRP
 [RTA-ZXB-GigabitEthernet0/1]vrrp vrid 1 preempt-mode
 {% endhighlight %}
 
-# RTB
+## RTB
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn RTB-ZXB
@@ -87,7 +89,7 @@ tags: H3C HCL OSPF VRRP
 [RTB-ZXB-GigabitEthernet0/2]vrrp vrid 1 preempt-mode
 {% endhighlight %}
 
-# PC5-->PC6
+## PC5-->PC6
 ```CLI
 ping 192.168.1.4
 ```
@@ -110,6 +112,7 @@ shutdown ## 关闭逻辑端口
 dis vrrp v ## 此时应该可以看到State变为Initialize
 ### 在关闭逻辑端口后，请稍作等待后，再进行ping测试
 ```
+
 ![](https://p.ananas.chaoxing.com/star3/origin/6c6e6fe93cc982ee6f24c76dfe649697.png)
 
 ## RTB
@@ -117,10 +120,12 @@ dis vrrp v ## 此时应该可以看到State变为Initialize
 dis vrrp v ## 查看VRRP状态
 ## 在RTB上此时State应为Master
 ```
+
 ![](https://p.ananas.chaoxing.com/star3/origin/dd4af68d7994223f4f512d22e684f474.png)
 
 ## ping测试 PC5-->PC6
 ```CLI
 ping 192.168.1.4
 ```
+
 ![](https://p.ananas.chaoxing.com/star3/origin/4f6f44a3d7e5fdee8a5888a456dbce42.png)
