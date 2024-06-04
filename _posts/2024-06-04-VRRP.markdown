@@ -7,11 +7,7 @@ categories: Daily
 tags: H3C HCL OSPF VRRP
 ---
 
-# 题目
-
->按照拓扑完成作业。
->
-
+## 题目
 
 ![](https://p.ananas.chaoxing.com/star3/origin/9bc81822180900851ab1a876feb5c48b.png)
 
