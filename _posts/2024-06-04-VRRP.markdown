@@ -7,9 +7,10 @@ categories: Daily
 tags: H3C HCL OSPF VRRP
 ---
 
- # 题目
- 按照拓扑完成作业。
+# 题目
 
+>按照拓扑完成作业。
+>
 ![](https://p.ananas.chaoxing.com/star3/origin/9bc81822180900851ab1a876feb5c48b.png)
 > 
 > 2.要求：
@@ -29,6 +30,7 @@ tags: H3C HCL OSPF VRRP
 > 将所有配置截图，ping通截图上传。
 > 
 > disp vrrp verbose后对比截图同时上传。（10分）
+
 
 
 # RT
