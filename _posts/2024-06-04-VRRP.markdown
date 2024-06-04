@@ -12,7 +12,9 @@ tags: H3C HCL OSPF VRRP
 >按照拓扑完成作业。
 >
 
+
 ![](https://p.ananas.chaoxing.com/star3/origin/9bc81822180900851ab1a876feb5c48b.png)
+
 
 > 
 > 2.要求：
@@ -127,5 +129,6 @@ dis vrrp v ## 查看VRRP状态
 ```CLI
 ping 192.168.1.4
 ```
+
 
 ![](https://p.ananas.chaoxing.com/star3/origin/4f6f44a3d7e5fdee8a5888a456dbce42.png)
