@@ -34,29 +34,30 @@ tags: Linux DHCP
 > （4）完成以上任务后的服务端dhcpd.conf文件内容截图
 
 ## DHCP
-在开始之前，请确保你的虚拟机网卡连接为NAT，我们需要使用互联网安装DHCP
-使用以下命令安装dhcp
+#### 在开始之前，请确保你的虚拟机网卡连接为NAT，我们需要使用互联网安装DHCP
+#### 使用以下命令安装dhcp
 ![](/assets/Daily-image/20240617/image2.png)
+```CLI
 yum install dhcp -y
-
-若出现其他进程占用，可尝试重启,
+```
+#### 若出现其他进程占用，可尝试重启,或者
 ```CLI
 systemctl stop PackageKit ## 停掉这个进程
 ```
 
-开启DHCP开机自启
+#### 开启DHCP开机自启
 ```CLI
 systemctl enable dhcpd
 ```
 
 ## 配置虚拟网卡网络
-打开虚拟网络编辑器,选中仅主机,修改IP地址，关闭使用本地DHCP，
-图中的17替换为你自己的数字即可，点击确定
+#### 打开虚拟网络编辑器,选中仅主机,修改IP地址，关闭使用本地DHCP，
+#### 图中的17替换为你自己的数字即可，点击确定
 ![](/assets/Daily-image/20240617/image8.png)
 
 ## 虚拟机内网络配置
-请改为手动，IP地址如图所示，图中的17替换为你自己的数字即可，点击Apply
-重新开关一次网络开关
+#### 请改为手动，IP地址如图所示，图中的17替换为你自己的数字即可，点击Apply
+#### 重新开关一次网络开关
 ![](/assets/Daily-image/20240617/image4.png)
 
 ## 配置DHCP服务
@@ -64,7 +65,7 @@ systemctl enable dhcpd
 ```CLI
 vim /etc/dhcp/dhcpd.conf
 ```
-文本内容如下
+#### 文本内容如下
 {% highlight text %}
 ddns-update-style none;
 log-facility local7;
@@ -95,7 +96,7 @@ systemctl disable firewalld.service
 ```
 #### 将虚拟机关机,修改网卡模式为仅主机模式
 ![](/assets/Daily-image/20240617/image9.png)
-##### 克隆出两个完整的虚拟机，分别开机
+#### 克隆出两个完整的虚拟机，分别开机
 
 #### 在第一个克隆机机修改主机名为你的姓名拼音全拼
 ```CLI
@@ -159,22 +160,22 @@ host 2303302317{
 
 ## Windows 下测试，
 打开设置--> 网络和Internet-->高级网络设置
-#### 展开VMNet1,点击编辑
+#### 展开VMnet1,点击编辑
 ![](/assets/Daily-image/20240617/image18.png)
 #### 选中IPV4，点属性，点击自动获得，确定
 ![](/assets/Daily-image/20240617/image19.png)
 ![](/assets/Daily-image/20240617/image20.png)
 ### Win+R 
+### cmd
 ```CLI
-cmd
 ipconfig /release ## 释放地址，该操作会使你断网
 ipconfig /renew ## 重新获取地址，过程较慢
 ```
 
-实际上在上一步修改完成后，就已经获取到了由虚拟机分配到的IP地址
-直接使用
+#### 实际上在上一步修改完成后，就已经获取到了由虚拟机分配到的IP地址
+#### 可以直接使用
 ```CLI
 ipconfig
 ```
-即可看到地址，用哪种自己选
+### 即可看到地址，用哪种自己选
 ![](/assets/Daily-image/20240617/image21.png)
