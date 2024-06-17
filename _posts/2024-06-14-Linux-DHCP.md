@@ -100,11 +100,11 @@ systemctl disable firewalld.service
 
 #### 在第一个克隆机机修改主机名为你的姓名拼音全拼
 ```CLI
-hostnamectl set-hostname zhuxiangbin
+hostnamectl set-hostname xxxxxxxxxx
 ```
 #### 第二个克隆机修改主机名为你的学号
 ```CLI
-hostnamectl set-hostname 2303302317
+hostnamectl set-hostname 00000000
 ```
 
 ## 静态DHCP
@@ -113,7 +113,7 @@ hostnamectl set-hostname 2303302317
 ifconfig
 ```
 #### ens33后面的ether,后面即为MAC地址
-![](/assets/Daily-image/20240617/image11.png)
+
 
 #### 再次编辑虚拟机DHCP配置文件
 ```CLI
@@ -140,17 +140,17 @@ subnet 192.168.17.0 netmask 255.255.255.0{
         max-lease-time 7200;
 }
 
-host zhuxiangbin{
+host yourFullName{
         hardware ethernet 00:0c:29:81:db:f6;
         fixed-address 192.168.17.166;
 }
 
-host 2303302317{
+host yourStuNum{
         hardware ethernet 00:0c:29:5f:cb:4f;
         fixed-address 192.168.17.188;
 }
 {% endhighlight %}
-![](/assets/Daily-image/20240617/image13.png)
+
 
 ### 在两台克隆机分别修改连接模式为DHCP，并重新开关网络，点击查看地址
 ![](/assets/Daily-image/20240617/image10.png)
@@ -158,10 +158,10 @@ host 2303302317{
 ![](/assets/Daily-image/20240617/image15.png)
 ![](/assets/Daily-image/20240617/image16.png)
 
-## Windows 下测试，
+## Windows下测试，
 打开设置--> 网络和Internet-->高级网络设置
 #### 展开VMnet1,点击编辑
-![](/assets/Daily-image/20240617/image18.png)
+
 #### 选中IPV4，点属性，点击自动获得，确定
 ![](/assets/Daily-image/20240617/image19.png)
 ![](/assets/Daily-image/20240617/image20.png)
