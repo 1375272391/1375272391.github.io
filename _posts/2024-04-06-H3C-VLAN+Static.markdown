@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "H3C VLAN+Static Routers"
+title:  "作业12：VLAN+静态路由实验"
 author: XM137
 date:   2024-04-06 23:26:00 +0800
 categories: Daily

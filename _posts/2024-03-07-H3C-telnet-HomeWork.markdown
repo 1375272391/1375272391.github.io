@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "H3C Telnet 作业"
+title:  "作业3：Telnet远程登录实验"
 author: XM137
 date:   2024-03-07 23:00:00 +0800
 categories: Daily

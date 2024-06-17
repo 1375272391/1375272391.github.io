@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "H3C Eth-Trunk router-on-a-stick DHCP "
+title:  "H3C网络技术（233,234,235）-阶段测试卷1"
 author: XM137
 date:   2024-04-16 13:19:00 +0800
 categories: Daily

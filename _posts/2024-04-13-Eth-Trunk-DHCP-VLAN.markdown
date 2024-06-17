@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "H3C Eth-Trunk DHCP VLAN "
+title:  "作业14：链路聚合"
 author: XM137
 date:   2024-04-13 09:28:00 +0800
 categories: Daily
