@@ -2,7 +2,7 @@
 layout: post
 title:  "项目十一 DHCP服务器的配置"
 author: XM137
-date:   2024-06-14 22:12:00 +0800
+date:   2024-06-18 00:12:00 +0800
 categories: Daily
 tags: Linux DHCP
 ---
