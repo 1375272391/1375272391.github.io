@@ -42,7 +42,6 @@ tags: Linux DHCP
 yum install dhcp -y
 ```
 #### 若出现其他进程占用，可尝试重启
-
 #### 开启DHCP开机自启
 ```CLI
 systemctl enable dhcpd
@@ -111,7 +110,6 @@ hostnamectl set-hostname 00000000
 ifconfig
 ```
 #### ens33后面的ether,后面即为MAC地址
-
 
 #### 再次编辑虚拟机DHCP配置文件
 ```CLI
