@@ -40,10 +40,7 @@ tags: Linux DHCP
 ```CLI
 yum install dhcp -y
 ```
-#### 若出现其他进程占用，可尝试重启,或者
-```CLI
-systemctl stop PackageKit ## 停掉这个进程
-```
+#### 若出现其他进程占用，可尝试重启
 
 #### 开启DHCP开机自启
 ```CLI
