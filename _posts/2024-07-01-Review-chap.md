@@ -6,8 +6,8 @@ date:   2024-07-01 19:42:00 +0800
 categories: Daily
 tags: HCL H3C ppp chap Review
 ---
-# 注意： 按照学习通拓扑连线
-# 仅供复习参考
+### 注意： 按照学习通拓扑连线
+### 仅供复习参考
 
 ## RTA
 {% highlight cli %}

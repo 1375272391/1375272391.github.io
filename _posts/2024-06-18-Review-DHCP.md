@@ -7,7 +7,8 @@ categories: Daily
 tags: HCL H3C DHCP Review
 ---
 
-### 按照学习通拓扑连线
+### 注意： 按照学习通拓扑连线
+### 仅供复习参考
 
 {% highlight cli %}
 <H3C>sy

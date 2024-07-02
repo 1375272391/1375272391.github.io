@@ -6,10 +6,10 @@ date:   2024-07-01 19:51:00 +0800
 categories: Daily
 tags: HCL H3C OSPF EtherTrunk VLAN Review
 ---
-# 注意： 按照学习通拓扑连线
-# 仅供复习参考
+### 注意： 按照学习通拓扑连线
+### 仅供复习参考
 
-# SW3
+## SW3
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn SW3-ZXB
@@ -30,7 +30,7 @@ tags: HCL H3C OSPF EtherTrunk VLAN Review
 [SW3-ZXB-ospf-1]
 {% endhighlight %}
 
-# Core
+## Core-SW
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn Core-SW-ZXB
@@ -53,7 +53,7 @@ tags: HCL H3C OSPF EtherTrunk VLAN Review
 [Core-SW-ZXB-ospf-1-area-0.0.0.0]n 22.12.10.1 0.0.0.0
 {% endhighlight %}
 
-#SW1
+## SW1
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn SW1-ZXB
@@ -82,7 +82,7 @@ tags: HCL H3C OSPF EtherTrunk VLAN Review
 [SW1-ZXB-ospf-1]i d
 {% endhighlight %}
 
-#SW2
+## SW2
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn SW2-ZXB
@@ -99,7 +99,7 @@ tags: HCL H3C OSPF EtherTrunk VLAN Review
 [SW2-ZXB-Bridge-Aggregation1]port t p v a
 {% endhighlight %}
 
-# RTA
+## RTA
 {% highlight cli %}
 <H3C>sy
 [H3C]sysn RTA-ZXB
