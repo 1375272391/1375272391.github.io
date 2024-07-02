@@ -26,8 +26,6 @@ tags: HCL H3C OSPF EtherTrunk VLAN Review
 [SW3-ZXB-ospf-1-area-0.0.0.0]n 22.12.30.5 0.0.0.0
 [SW3-ZXB-ospf-1-area-0.0.0.0]q
 [SW3-ZXB-ospf-1]i d
-[SW3-ZXB-ospf-1]
-[SW3-ZXB-ospf-1]
 {% endhighlight %}
 
 ## Core-SW
@@ -125,7 +123,7 @@ tags: HCL H3C OSPF EtherTrunk VLAN Review
 |    PC_11    |    22.12.40.2     |   255.255.255.0    |      22.12.40.1     | 
 |    PC_10    |   192.168.10.10   |   255.255.255.0    |     192.168.10.1    | 
 
-## PC 10 ping --> 5&6&8&11
+## PC 10 ping --> 5 & 6 & 8 & 11
 ```CLI
 ping 192.168.20.5
 ping 192.168.30.6
