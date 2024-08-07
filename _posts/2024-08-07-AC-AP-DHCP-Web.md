@@ -11,8 +11,9 @@ tags: HCL H3C AC AP DHCP default-group Web
 <h4>HCL 依赖于 VMBOX <br>
 我们直接使用VMBOX的DHCP服务</h4>
 ![](/assets/H3C/2024-08-07/image1.png)
-<h4>仅主机网卡地址为 192.168.56.1<br>
-默认 DHCP 自动分配从 101 到 254<br>
+<h4>在默认情况下：<br>
+仅主机网卡地址为 192.168.56.1<br>
+DHCP 自动分配从 192.168.56.101 到 192.168.56.254<br>
 设置静态IP的时候避免使用这些地址<br>
 我们为 AC 设置同网段 静态IP 以便PC宿主机可以访问虚拟机<br>
 模拟器使用 Host本地主机 VMBOX仅主机网卡 连接AC</h4>
@@ -44,7 +45,7 @@ tags: HCL H3C AC AP DHCP default-group Web
 <h4>可以看到AP已经成功添加</h4>
 ![](/assets/H3C/2024-08-07/image4.png)
 
-#### 4、创建 WLAN服务模板 <br>无线配置 --> 无线网络<br> 点击添加WLAN配置模板</h4>
+#### 4、创建 WLAN服务模板 <br>无线配置 --> 无线网络<br> 点击添加WLAN配置模板
 ![](/assets/H3C/2024-08-07/image5.png)
 
 <h4>需要添加模板名称和无线名称，开启无线服务，点击确定</h4>
