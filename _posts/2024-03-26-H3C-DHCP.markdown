@@ -1,0 +1,81 @@
+---
+layout: post
+title:  "作业9：DHCP实验"
+author: XM137
+date:   2024-03-26 19:49:00 +0800
+categories: Daily
+tags: H3C HCL DHCP
+---
+> 按照拓扑配置实验。
+> 
+![](https://p.ananas.chaoxing.com/star3/origin/8a9372e07f375abb961e5774acca6ee4.png)
+> 
+> 要求：
+> 
+> 按照拓扑在HCL模拟器中连接设备（10分）
+> 
+> 设备名称应更改为自己的姓名首字母（10分）
+> 
+> 做好地址规划：
+> 
+> 网段：10.32.1.0/24
+> 
+> 网关：10.32.1.254
+> 
+> DNS：10.32.1.1
+> 
+> 可分配用户地址段：10.32.1.2-253
+> 
+> 不可分配地址段:网关和DNS
+> 
+> 4.配置相关实验.（65分）
+> 
+> 5将所有配置命令截图上传，包括拓扑图，路由器配置，终端操作，测试结果等。（15分）
+
+{% highlight cli %}
+system-view  ## 进入系统视图
+sysname xxx+n  ## 设置主机名
+dhcp enable  ## 启用DHCP
+dhcp server ip-pool 0  ## 配置DHCP池
+network 10.32.1.0 mask 255.255.255.0  ## 配置DHCP网络地址和掩码
+gateway-list 10.32.1.254  ## 配置DHCP池网关地址
+dns-list 10.32.1.1  ## 配置DHCP池DNS
+expired day 7  ## 配置DHCP租约过期
+quit  ##  退回系统视图
+dhcp server forbidden-ip 10.32.1.1  ## 配置DHCP池不允许分配的IP地址
+dhcp server forbidden-ip 10.32.1.254  ## 同上，网关地址不允分配给主机使用
+interface GigabitEthernet 0/0  ## 进入0/0端口
+ip address 10.32.1.254 24  ## 设置IP地址及掩码
+dhcp server apply ip-pool 0  ## 在0/0接口上应用DHCP地址池
+quit ## 退回系统视图
+save force ##  强制保存配置
+ps:以下命令请根据需要选择是否使用
+display dhcp server free-ip  ## 显示剩余IP
+display dhcp server pool ##查看DHCP地址池
+display dhcp server statistics  ## 查看DHCP服务状态
+display dhcp server ip-in-use ## 显示在用IP地址
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/f987eaf9de1547ae37c8966fccd33776.png)
+<br>
+![](https://p.ananas.chaoxing.com/star3/origin/cab6c759999735f2613136c9bc78911f.png)
+<br>
+![](https://p.ananas.chaoxing.com/star3/origin/58c253a3fefc00f7de93a69ce32e8d8f.png)
+<br>
+![](https://p.ananas.chaoxing.com/star3/origin/e95195433efc86eafff575f07f9fec3a.png)
+<br>
+![](https://p.ananas.chaoxing.com/star3/origin/108f2419c2ef0085aa849544f2866cdc.png)
+<br>
+做完这些步骤，如果遇到DHCP未分配地址，请将当前项目保存，然后重启HCL软件，打开之前的项目即可 <br>
+PC直接配置即可 <br>
+![](https://p.ananas.chaoxing.com/star3/origin/d0c00c40f69de44bf3d3c1b052d292cf.png)
+<br>
+![](https://p.ananas.chaoxing.com/star3/origin/7693bf63ced196cf71c0d0aedc71c3af.png)
+<br>
+![](https://p.ananas.chaoxing.com/star3/origin/29a568f5259fbc478e4dc4227eb6773a.png)
+
+
+
+
+
+
+

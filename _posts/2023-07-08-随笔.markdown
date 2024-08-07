@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "随笔"
+author: XM137
+date:   2023-07-08 21:29:20 +0800
+categories: Daily
+---
+大多数的时候，无聊至极的时候，拿本子写点东西，都有啥呢 <br>
+写过Android编译，写过新标准的事儿，也写过人工智障的事儿 <br>
+今儿写点啥呢，说实话还没想好 <br>
+前几天刚刚搭建好了博客站，后面又加了评论，不过这个评论是三方插件，名字叫 `utterances` ，它基于 `Github Issues` ，并且需要为其配置一个公开仓库用以存放评论，加入的方式也很简单，在 [utterances][utterances] 网站上简单选择几下，最后直接复制 `script` 脚本粘贴到自己的网站布局里就可以成功添加了 <br>
+之前也在 `utterances` 的[Github Issues][utterances Issues] 里看到过，的确有人建议添加不同语言，但是下面没啥回复，其实我也有想过要不要把 [utterances][utterances] 的脚本`clone`下来，然后修改对应的 `Text` ，将其翻译为中文，但是在添加的时候它只有一行链接指向，但是实际看的时候却不仅仅是那一个 `js` 脚本文件，还有其他的，我不确定直接修改能否直接成功，（好吧主要还是因为懒，好像天儿还有点热）另外的一点就是，会不会有其他的，在不用去修改原代码的情况下，做出一个翻译出来。好了先告一段落。 <br>
+另外一点就是它基于 `Github Issues` 所以，在使用评论的时候也必须使用 `Github` 登录，当然也可能多想了，这些Blog能被多少人看到还是个问题 <br>
+下面的任务，我可能也会把网站主页稍微 `美化` 一下，添加一些美观的东西 <br>
+至于何时真正更新 `Blog` 这个，不好说，时间可能很长，也可能很短 <br>
+好了，就先到这里吧 <br>
+额，大半夜的，终究还是改了时间格式  <br>
+
+[utterances]: https://utteranc.es
+[utterances Issues]: https://github.com/utterance/utterances/issues

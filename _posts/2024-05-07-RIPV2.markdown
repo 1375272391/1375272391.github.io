@@ -1,0 +1,102 @@
+---
+layout: post
+title:  "作业21：RIP实验"
+author: XM137
+date:   2024-05-07 12:50:00 +0800
+categories: Daily
+tags: HCL H3C RIPV2
+---
+## 题目如下
+要求：
+> 
+> 按照要求连接设备，设备名改为姓名首字母。
+> 
+> 完成基础网络设置,
+> 
+> 使用RIP协议实现全网互通。
+> 
+> 测试结果，远端PC机分别与 学生区VLAN10，服务器测试机互通。
+> 
+> 测试VLAN，Ping其网关地址。分别截图测试结果。
+> 
+> 上传所有配置截图和测试截图。
+> 
+> 拓扑图如下：
+> 
+> 
+![](https://p.ananas.chaoxing.com/star3/origin/683afb68d39d8f74cd06f079ddd7dd56.png)
+
+### 远端核心 路由
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn R-RT-ZXB
+[R-RT-ZXB]int s1/0
+[R-RT-ZXB-Serial1/0]ip add 10.1.2.1 24
+[R-RT-ZXB-Serial1/0]int g0/1
+[R-RT-ZXB-GigabitEthernet0/1]ip add 7.14.50.1 24
+[R-RT-ZXB-GigabitEthernet0/1]rip ## 配置rip
+[R-RT-ZXB-rip-1]v 2 ## v2版 RIP
+[R-RT-ZXB-rip-1]undo sum ## 取消聚合
+[R-RT-ZXB-rip-1]net 7.14.50.0 ## 使能 rip
+[R-RT-ZXB-rip-1]net 10.1.2.0
+{% endhighlight %}
+
+### 核心路由器
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn C-RT-ZXB
+[C-RT-ZXB]int s1/0
+[C-RT-ZXB-Serial1/0]ip add 10.1.2.2 24
+[C-RT-ZXB-Serial1/0]int s2/0
+[C-RT-ZXB-Serial2/0]ip add 172.16.3.1 24
+[C-RT-ZXB-Serial2/0]int g0/0
+[C-RT-ZXB-GigabitEthernet0/0]ip add 172.16.2.2 24
+[C-RT-ZXB-GigabitEthernet0/0]rip
+[C-RT-ZXB-rip-1]v 2
+[C-RT-ZXB-rip-1]undo sum
+[C-RT-ZXB-rip-1]net 10.1.2.0
+[C-RT-ZXB-rip-1]net 172.16.3.0
+[C-RT-ZXB-rip-1]net 172.16.2.0
+{% endhighlight %}
+
+### 信息中心 路由
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn INFO-C-RT-ZXB
+[INFO-C-RT-ZXB]int s2/0
+[INFO-C-RT-ZXB-Serial2/0]ip add 172.16.3.3 24
+[INFO-C-RT-ZXB-Serial2/0]int g0/0
+[INFO-C-RT-ZXB-GigabitEthernet0/0]ip add 172.162.100.1 24
+[INFO-C-RT-ZXB-GigabitEthernet0/0]rip
+[INFO-C-RT-ZXB-rip-1]v 2
+[INFO-C-RT-ZXB-rip-1]undo sum
+[INFO-C-RT-ZXB-rip-1]net 172.16.3.0
+[INFO-C-RT-ZXB-rip-1]net 172.162.100.0
+{% endhighlight %}
+
+### 学生区 交换
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn Stu-SW-ZXB
+[Stu-SW-ZXB]v 100
+[Stu-SW-ZXB-vlan100]port g1/0/1
+[Stu-SW-ZXB-vlan100]int v 100
+[Stu-SW-ZXB-Vlan-interface100]ip add 172.16.2.1 24
+[Stu-SW-ZXB-Vlan-interface100]v 10
+[Stu-SW-ZXB-vlan10]port g1/0/2
+[Stu-SW-ZXB-vlan10]int v 10
+[Stu-SW-ZXB-Vlan-interface10]ip add 192.168.50.1 24
+[Stu-SW-ZXB-Vlan-interface10]rip
+[Stu-SW-ZXB-rip-1]v 2
+[Stu-SW-ZXB-rip-1]undo sum
+[Stu-SW-ZXB-rip-1]net 172.16.2.0
+[Stu-SW-ZXB-rip-1]net 192.168.50.0
+{% endhighlight %}
+
+### ping 测试
+#### 在远程PC管理机 ping 如下两个地址
+{% highlight cli %}
+<H3C>ping 172.162.100.10
+<H3C>ping 192.168.50.5
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/f9984b13e2c86274244037cae19aee04.png)

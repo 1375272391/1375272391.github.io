@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "作者滴QQ组织"
+author: XM137
+date:   2023-07-05 15:59:50 +0800
+categories: "Free"
+---
+
+![Bochs](/assets/Daily-image/20230705/Bochs.png)
+
+Bochs1群 [530457778][Bochs1]
+
+[Bochs1]: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=xXk2PzeGquIIHNOxmVI0O7FgKfYnRgDI&authKey=rtF8L5mibjTLkxhNybvkC3qRGlomYwL0IodElyxWYRmoyV2tby%2BrJvCHM1PYuKR7&noverify=0&group_code=530457778

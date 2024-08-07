@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "作业4：SSH实验"
+author: XM137
+date:   2024-03-08 23:51:00 +0800
+categories: Daily
+tags: H3C HCL SSH
+---
+## 题目如下
+> 使用HCL模拟器，按照拓扑图连线，并完成以下作业。
+>
+![chaoxingimage](https://p.ananas.chaoxing.com/star3/origin/1c1c364a19c218c035862c176aa48dd0.png)
+>
+>配置要求：
+>
+> 
+> 1.按照拓扑连线，使用2台路由器，一台作为核心路由器，一台作为PC终端进行连线。并更改设备用户名为自己姓名首字母 （10分）
+> 
+> 2.按要求正确配置IP地址，路由器配置：更改设备用户名为自己姓名首字母，并按要求设置IP地址（10分），终端配置：按要求设置IP地址。（5分）
+> 
+> 3.配置SSH远程登录，选择scheme验证方式，用户名设置为自己姓名首字母，密码自定义。启用SSH服务，设置协议入站，角色权限为network-admin。开启rsa公钥验证:public-key local create rsa（50分）
+> 
+> 4.PC端远程登录测试，使用SSH2登录：ssh2 x.x.x.x ,进入路由器并显示当前配置信息。（15分）
+> 
+> 5.所有配置以截图方式上传。包含终端IP配置，路由器所有配置和验证成功截图（10分）
+> 
+> 提示：确保用户ssh登录后，获得管理员权限，需做如下配置：
+> 
+> [H3C-line-vty0-3]user-role network-admin
+>
+> [H3C-line-vty0-3]undo user-role network-operator
+> 
+> [H3C]local-user XXX class manage     ###XXX代表用户名
+>
+> [H3C-luser-manage-XXX]authorization-attribute user-role network-admin
+
+## ssh配置如下
+```CLI
+system-view ## 系统视图
+sysname xxx+01 ## 主机名
+public-key local create rsa ## 为ssh生成RSA密钥对，直接输入回车即可
+ssh server enable ## 启用ssh服务
+interface GigabitEthernet 0/0 ##进入相应接口试图
+ip address 21.53.1.1 28 ## 为相应接口配置IP地址
+quit
+line vty 0 63 ## 进入 vty 端口
+authentication-mode scheme ## 设置认证模式为用户名密码模式
+protocol inbound ssh ## ssh 协议绑定
+user-role network-admin ## 为 vty 分配管理员权限
+undo user-role network-operator ## 撤销 vty 的操作员权限
+quit
+local-user xxx class manage ## 创建账户 xxx 并使用 class 分配管理权限
+password simple xxxxxxxxxx ## 为创建账户设置密码 至少10位，且至少包含一个字母
+service-type ssh ## 设置服务模式为 ssh
+authorization-attribute user-role network-admin ##为创建账户分配管理员角色
+quit
+```
+## PC 连接
+作业要求使用路由器作为PC使用
+路由02配置IP方式与路由01保持一致<br>
+ `IP 地址` 不同<br>
+
+```CLI
+system-view ## 系统视图
+sysname xxx+02 ## 设置第二台路由主机名
+interface GigabitEthernet 0/0 ## 进入相应接口试图
+ip address 21.53.1.2 28 ## 为相应接口配置IP地址
+quit ## 退出到系统视图
+quit ## 退出到用户视图
+```
+
+PC使用 `ssh2` 连接<br>
+命令行如下<br>
+
+```WARNING
+谁TM再说输入密码没有显示，直接叉出去
+```
+<br>
+```CLI
+ssh2 21.53.1.1
+```
+输入完用户名密码后，还需要再分行输入两个Y <br>
+![0308](/assets/Daily-image/20240308/0308.png)
+成功以后,可以直接 <br>
+```CLI
+display current-configuration ## 显示当前配置信息
+```

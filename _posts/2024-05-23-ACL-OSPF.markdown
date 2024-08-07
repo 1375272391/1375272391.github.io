@@ -1,0 +1,158 @@
+---
+layout: post
+title:  "作业25：ACL+ospf实验"
+author: XM137
+date:   2024-05-23 23:59:00 +0800
+categories: Daily
+tags: H3C HCL OSPF ACL
+---
+
+## 题目
+> 按照拓扑，完成作业实现互通与访问限制。截图上传全部配置。
+
+![](https://p.ananas.chaoxing.com/star3/origin/58da41f96bce4589b222936d06990779.png)
+
+```WARNING
+截至本文章发布时，官网最新HCL模拟器5.10.3交换机在配置ACL的时候，需要使用 acl + acl模式 + 数字
+例如 acl adv 3000 , acl basic 2000 
+路由器可正常使用 acl + num + 数字 的形式配置ACL
+例如 acl number 3000
+```
+## SW1
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn SW1-ZXB
+[SW1-ZXB]v 10
+[SW1-ZXB-vlan10]port g1/0/6
+[SW1-ZXB-vlan10]int v 10
+[SW1-ZXB-Vlan-interface10]ip a 172.16.10.1 24
+[SW1-ZXB-Vlan-interface10]v 20
+[SW1-ZXB-vlan20]port g1/0/4
+[SW1-ZXB-vlan20]int v 20
+[SW1-ZXB-Vlan-interface20]ip a 172.16.20.1 24
+[SW1-ZXB-Vlan-interface20]v 30
+[SW1-ZXB-vlan30]port g1/0/2
+[SW1-ZXB-vlan30]int v 30
+[SW1-ZXB-Vlan-interface30]ip a 172.16.30.1 24
+[SW1-ZXB-Vlan-interface30]ospf
+[SW1-ZXB-ospf-1]a 0
+[SW1-ZXB-ospf-1-area-0.0.0.0]n 10.10.1.2 0.0.0.0
+[SW1-ZXB-ospf-1-area-0.0.0.0]q
+[SW1-ZXB-ospf-1]i d
+[SW1-ZXB-ospf-1]v 100
+[SW1-ZXB-vlan100]port g1/0/1
+[SW1-ZXB-vlan100]int v 100
+[SW1-ZXB-Vlan-interface100]ip a 10.10.1.2 30
+[SW1-ZXB-Vlan-interface100]acl a 3000 ## 设置高级ACL
+[SW1-ZXB-acl-ipv4-adv-3000]rule 5 permit ip source 172.16.10.0 0.0.0.255 destination 33.12.10.0 0.0.0.255
+[SW1-ZXB-acl-ipv4-adv-3000]rule 10 permit ip source 172.16.20.0 0.0.0.255 destination 33.12.10.0 0.0.0.255
+[SW1-ZXB-acl-ipv4-adv-3000]rule 15 permit ip source 172.16.30.0 0.0.0.255 destination any
+[SW1-ZXB-acl-ipv4-adv-3000]rule 20 permit tcp source 172.16.30.0 0.0.0.255 destination-port eq ftp
+[SW1-ZXB-acl-ipv4-adv-3000]rule 25 permit ospf source any destination any
+[SW1-ZXB-acl-ipv4-adv-3000]rule 30 deny ip source any
+[SW1-ZXB-acl-ipv4-adv-3000]acl a 3001
+[SW1-ZXB-acl-ipv4-adv-3001]rule 5 deny ip source 172.16.10.0 0.0.0.255 destination 172.16.30.0 0.0.0.255
+[SW1-ZXB-acl-ipv4-adv-3001]rule 10 deny ip source 172.16.20.0 0.0.0.255 destination 172.16.30.0 0.0.0.255
+[SW1-ZXB-acl-ipv4-adv-3001]int v 100
+[SW1-ZXB-Vlan-interface100]packet-filter 3000 outbound ## 绑定转发端口规则
+[SW1-ZXB-Vlan-interface100]int v 30
+[SW1-ZXB-Vlan-interface30]packet-filter 3001 outbound 
+{% endhighlight %}
+
+```WARNING
+设置ACL规则时，若有禁止所有网段的规则，请一定在允许规则之后设置
+ACL匹配到一条规则后，停止匹配
+如果一开始就设置了禁止所有网段的规则
+即使后面添加了允许规则，也不再被匹配
+```
+## RT1
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT1-ZXB
+[RT1-ZXB]int l 0 ## 回环接口
+[RT1-ZXB-LoopBack0]ip a 1.1.1.1 32
+[RT1-ZXB-LoopBack0]int g0/0
+[RT1-ZXB-GigabitEthernet0/0]ip a 33.12.10.1 24
+[RT1-ZXB-GigabitEthernet0/0]in g0/1
+[RT1-ZXB-GigabitEthernet0/1]ip a 10.10.1.1 30
+[RT1-ZXB-GigabitEthernet0/1]in g0/2
+[RT1-ZXB-GigabitEthernet0/2]ip a 10.10.2.1 24
+[RT1-ZXB-GigabitEthernet0/2]ospf router-id 1.1.1.1
+[RT1-ZXB-ospf-1]a 0
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 1.1.1.1 0.0.0.0 ## 加入回环地址
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 10.10.1.1 0.0.0.0
+[RT1-ZXB-ospf-1-area-0.0.0.0]q
+[RT1-ZXB-ospf-1]i d ## 导入直连路由
+[RT1-ZXB-ospf-1]acl number 3000 ## 设置高级ACL
+[RT1-ZXB-acl-ipv4-adv-3000]rule 5 permit tcp source 172.16.30.0 0.0.0.255 destination 10.10.2.0 0.0.0.255 destination-port eq telnet ## 按协议允许特定网段允许Telnet
+[RT1-ZXB-acl-ipv4-adv-3000]rule 10 deny tcp source any destination 10.10.2.0 0.0.0.255 destination-port eq telnet ## 封禁所有网段访问目标网段Telnet
+[RT1-ZXB-acl-ipv4-adv-3000]int g0/2
+[RT1-ZXB-GigabitEthernet0/2]packet-filter 3000 outbound ## 绑定转发端口ACL高级规则
+{% endhighlight %}
+
+## RT2
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT2-ZXB
+[RT2-ZXB]i g0/2
+[RT2-ZXB-GigabitEthernet0/2]ip a 10.10.2.2 24
+[RT2-ZXB-GigabitEthernet0/2]qu
+[RT2-ZXB]ip route-static 0.0.0.0 0 10.10.2.1
+[RT2-ZXB]tel ser e
+[RT2-ZXB]line vty 0 4
+[RT2-ZXB-line-vty0-4]authentication-mode scheme 
+[RT2-ZXB-line-vty0-4]q
+[RT2-ZXB]local-user zxb
+[RT2-ZXB-luser-manage-zxb]password simple a123456789
+[RT2-ZXB-luser-manage-zxb]service-type telnet
+[RT2-ZXB-luser-manage-zxb]authorization-attribute user-role network-admin 
+{% endhighlight %}
+
+## PC地址表
+
+|     PC      |     IP地址     |      子网掩码      |        网关       |     
+|   :----:    |     :----:     |       :----:      |       :----:      |
+|    PC_6     |  172.16.30.10  |   255.255.255.0   |    172.16.30.1    |
+|    PC_7     |  172.16.20.10  |   255.255.255.0   |    172.16.20.1    |
+|    PC_8     |  172.16.10.10  |   255.255.255.0   |    172.16.10.1    |   
+|  服务区PC    |  33.12.10.100  |   255.255.255.0   |    33.12.10.1    |   
+
+## 访客区PC8 --> 其他区域 ping 测试
+{% highlight cli %}
+ping 33.12.10.100
+172.16.30.10
+10.10.2.2
+##仅有 33.12.10.100 才能成功
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/84846ead39f4fbe672d3850fe3444004.png)
+
+## 管理区PC6 --> 管理区路由 Telnet 测试
+{% highlight cli %}
+telnet 10.10.2.2
+##输入你设置的用户名密码
+dis cu 
+##之后退出即可
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/a73e3bf1b979619d5e071ce6ffabb3d7.png)
+
+## 服务区 --> 管理区路由 Telnet 测试
+{% highlight cli %}
+telnet 10.10.2.2
+##你要是连上了，那真...
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/06ca13ca8408a59de91ca5719ff7296e.png)
+
+## 以下地址 ping 测试应全通
+## 管理区PC6 --> 服务区测试
+{% highlight cli %}
+ping 33.12.10.100
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/42a8554e3ff7f3e82862c5e45aff7d5f.png)
+
+## 服务区 --> 其他区域测试
+{% highlight cli %}
+ping 172.16.20.10
+ping 172.16.30.10
+ping 10.10.2.2
+{% endhighlight %}
+![](https://p.ananas.chaoxing.com/star3/origin/c6cf3e497c2b77a006ac05411feb01ad.png)

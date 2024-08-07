@@ -1,0 +1,105 @@
+---
+layout: post
+title:  "作业26：NAT实验-OSPF版"
+author: XM137
+date:   2024-05-28 13:02:00 +0800
+categories: Daily
+tags: H3C HCL OSPF NAT
+---
+
+# 题目
+
+>按照拓扑完成作业。
+> 
+> 要求：
+> 
+> 网络互通要求：
+> 
+> 三班：学号后四位2218之前做静态路由，2219-2261做RIP，2262之后做OSPF
+> 
+> 四班：学号后四位2238之前做静态路由，2239-2287做RIP，2288之后做OSPF
+> 
+> 五班：学号后四位2771之前做静态路由，2772-2786做RIP，2787之后做OSPF
+> 
+> 更改设备名称为姓名首字母，例如RT-XXX
+> 
+> 使用静态或动态路由实现网络互通。（配置截图）
+> 
+> 使用NAT地址转换，实现私有网PC通过公网地址访问服务器。使用no-pat,一对一地址转换（配置截图）。
+> 
+> 展示一对一地址效果截图。
+> 
+> disp nat session verbose
+> 
+> disp nat session brief
+> 
+> 将所有配置以及测试结果全部上传截图。
+> 
+> 拓扑图如下：
+
+![](https://p.ananas.chaoxing.com/star3/origin/4098edf0694f3d8e08866f24297cef02.png)
+
+
+## RT1
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT1-ZXB
+[RT1-ZXB]i g0/1
+[RT1-ZXB-GigabitEthernet0/1]ip a 192.168.1.254 24
+[RT1-ZXB-GigabitEthernet0/1]in g0/0
+[RT1-ZXB-GigabitEthernet0/0]ip a 10.10.1.1 24
+[RT1-ZXB-GigabitEthernet0/0]ospf
+[RT1-ZXB-ospf-1]a 0
+[RT1-ZXB-ospf-1-area-0.0.0.0]n 10.10.1.1 0.0.0.0
+[RT1-ZXB-ospf-1-area-0.0.0.0]q
+[RT1-ZXB-ospf-1]i d
+[RT1-ZXB-ospf-1]acl n 2000
+[RT1-ZXB-acl-ipv4-basic-2000]rule 5 per sou 192.168.1.0 0.0.0.255
+[RT1-ZXB-acl-ipv4-basic-2000]nat a 1
+[RT1-ZXB-address-group-1]a 10.10.1.100 10.10.1.200
+[RT1-ZXB-address-group-1]in g0/0
+[RT1-ZXB-GigabitEthernet0/0]nat outbound 2000 address-group 1 no-pat 
+{% endhighlight %}
+
+## RT2
+{% highlight cli %}
+<H3C>sy
+[H3C]sysn RT2-ZXB
+[RT2-ZXB]in g0/0
+[RT2-ZXB-GigabitEthernet0/0]ip a 10.10.1.2 24
+[RT2-ZXB-GigabitEthernet0/0]in g0/1
+[RT2-ZXB-GigabitEthernet0/1]ip a 129.10.100.1 24
+[RT2-ZXB-GigabitEthernet0/1]ospf 
+[RT2-ZXB-ospf-1]a 0
+[RT2-ZXB-ospf-1-area-0.0.0.0]n 10.10.1.2 0.0.0.0
+[RT2-ZXB-ospf-1-area-0.0.0.0]q
+[RT2-ZXB-ospf-1]i d
+{% endhighlight %}
+
+## PC地址表
+
+|     PC      |     IP地址       |      子网掩码      |        网关         |     
+|   :----:    |     :----:       |       :----:      |       :----:        |
+|    PC_5     |   192.168.1.1    |   255.255.255.0   |    192.168.1.254    |
+|    PC_6     |   192.168.1.2    |   255.255.255.0   |    192.168.1.254    |
+|   服务端     |  129.10.100.100  |   255.255.255.0   |    129.10.100.1    |   
+
+
+## PC5 --> 服务端
+```CLI
+ping 129.10.100.100
+```
+
+## PC6 --> 服务端
+```CLI
+ping 129.10.100.100
+```
+
+## 请分别做完两条ping命令后，在路由RT1立即执行以下两条命令
+## RT1
+```CLI
+dis nat sess br
+dis nat no-pat
+```
+
+![](https://p.ananas.chaoxing.com/star3/origin/4147ba8ea2b7c36743eb47af63de8d11.png)

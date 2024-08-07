@@ -1,0 +1,143 @@
+---
+layout: post
+title:  "作业17：生成树实验"
+author: XM137
+date:   2024-04-28 23:29:00 +0800
+categories: Daily
+tags: H3C HCL MSTP
+---
+## 1、
+> 按照拓扑，连接设备。按要求作答；
+> 
+> 查询网络设备初始状态STP信息，并截图，分析出根桥。
+> 
+> （10.0分）
+![](https://p.ananas.chaoxing.com/star3/origin/08c13d1dabf8300e584490d137d28483.png)
+
+
+### 分别在SW1 SW2 SW3 中输入
+{% highlight cli %}
+dis stp br
+{% endhighlight %}
+截图提交即可
+例如，可以看到SW1的两个端口角色均为DESI,那么就可以说
+![](https://p.ananas.chaoxing.com/star3/origin/9f6619da8b1db3eb7e5441d352d4def9.png)
+```cli
+因为SW1的两个端口均为DESI，所以SW1为根路由
+```
+#### 此题结束
+
+## 2、
+> 如上拓扑，指定根桥。
+> 
+> 将SW3改为根桥，SW1改为次根桥。查看stp信息，并截图。。
+> 
+> （10.0分）
+
+
+### SW3
+{% highlight cli %}
+sys
+stp root p
+dis stp br
+{% endhighlight %}
+
+### SW1
+{% highlight cli %}
+sys
+stp root s
+dis stp br
+{% endhighlight %}
+### 截图提交即可
+##### 例如下图，SW3执行完后两个端口角色变为 `DESI`
+![](https://p.ananas.chaoxing.com/star3/origin/3e2bc5b716d2ed79489450b8e75d1976.png)
+#### 此题结束
+
+
+## 3、题目
+> （1）所有交换机上更改名称为自己姓名首字母，创建vlan10、vlan20、vlan30、vlan30,并在接口1、2上放行。（25分）
+> 
+> （2）配置MSTP，SW1作为实例1的主根，实例2的备份根；SW2作为实例2的主根，实例1的备份根。最终达到的效果是：利用MSTP技术，消除2层环路，实例1阻塞SW2上的2口，实例2阻塞SW2上的1口，实现链路备份和基于vlan的负载均衡。（30分）
+> 
+> （3）配置SW3的边缘端口和BPDU保护功能，即接入PC机的3口和4口。（15分）
+> 
+> （4）在SW3上display STP bri查看配置效果（10分）
+> 
+> （5）所有配置没截图上传。否则0分
+
+
+![](https://p.ananas.chaoxing.com/star3/origin/71d7d9c18499444d525d538e646432e3.png)
+
+# 拓扑文件题目中已经给出，请使用题目给出的`hcl`拓扑文件
+## SW1
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn SW1-xxx
+[SW1-ZXB]v 10
+[SW1-ZXB-vlan10]v 20
+[SW1-ZXB-vlan20]v 30
+[SW1-ZXB-vlan30]v 40
+[SW1-ZXB-vlan40]int ran g1/0/1 to g1/0/2
+[SW1-ZXB-if-range]port link-type t
+[SW1-ZXB-if-range]port t p v a
+[SW1-ZXB-if-range]stp g e
+[SW1-ZXB]stp m m
+[SW1-ZXB]stp r
+[SW1-ZXB-mst-region]region-name xxx
+[SW1-ZXB-mst-region]revision-level 10
+[SW1-ZXB-mst-region]ins 1 v 10 20 
+[SW1-ZXB-mst-region]ins 2 v 30 40
+[SW1-ZXB-mst-region]ac re
+[SW1-ZXB-mst-region]stp ins 1 root p
+[SW1-ZXB]stp ins 2 root s
+{% endhighlight %}
+
+## SW2
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn SW2-xxx
+[SW2-ZXB]v 10
+[SW2-ZXB-vlan10]v 20
+[SW2-ZXB-vlan20]v 30
+[SW2-ZXB-vlan30]v 40
+[SW2-ZXB-vlan40]int ran g1/0/1 to g1/0/2
+[SW2-ZXB-if-range]port link-type t
+[SW2-ZXB-if-range]port t p v a
+[SW2-ZXB-if-range]stp g e
+[SW2-ZXB]stp m m
+[SW2-ZXB]stp r
+[SW2-ZXB-mst-region]region-name xxx
+[SW2-ZXB-mst-region]revision-level 10
+[SW2-ZXB-mst-region]ins 1 v 10 20
+[SW2-ZXB-mst-region]ins 2 v 30 40
+[SW2-ZXB-mst-region]ac re
+[SW2-ZXB-mst-region]stp ins 2 root p
+[SW2-ZXB]stp ins 1 root s
+{% endhighlight %}
+
+## SW3
+{% highlight cli %}
+<H3C>sys
+[H3C]sysn SW3-xxx
+[SW3-ZXB]v 10
+[SW3-ZXB-vlan10]port g1/0/3
+[SW3-ZXB-vlan10]v 20
+[SW3-ZXB-vlan20]v 30
+[SW3-ZXB-vlan30]port g1/0/4
+[SW3-ZXB-vlan30]v 40
+[SW3-ZXB-vlan40]int ran g1/0/1 to g1/0/2
+[SW3-ZXB-if-range]port link-type t
+[SW3-ZXB-if-range]port t p v a
+[SW3-ZXB-if-range]stp g e
+[SW3-ZXB]stp m m
+[SW3-ZXB]stp r
+[SW3-ZXB-mst-region]region-name xxx
+[SW3-ZXB-mst-region]revision-level 10
+[SW3-ZXB-mst-region]ins 1 v 10 20
+[SW3-ZXB-mst-region]ins 2 v 30 40
+[SW3-ZXB-mst-region]ac re
+[SW3-ZXB-mst-region]int ran g1/0/3 to g1/0/4
+[SW3-ZXB-if-range]stp edged-port 
+[SW3-ZXB-if-range]stp port bpdu-protection  e
+[SW3-ZXB-if-range]dis stp br
+{% endhighlight %}
