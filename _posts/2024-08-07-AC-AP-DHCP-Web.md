@@ -26,45 +26,44 @@ DHCP 自动分配从 192.168.56.101 到 192.168.56.254<br>
 [H3C-Vlan-interface1]ip http enable ## 启用 http 
 {% endhighlight %}
 
-#### 2、创建Web管理账户
+#### 创建Web管理账户
 {% highlight cli %}
 [H3C]local-user admin class manage ## 配置用户分类
 [H3C-luser-manage-admin]authorization-attribute user-role network-admin ## 配置用户角色
 [H3C-luser-manage-admin]password simple a123456789 ## 最少10位
 [H3C-luser-manage-admin]service-type http ## 协议绑定
 {% endhighlight %}
-<h4>
-至此，可在PC宿主机使用浏览器进行登录<br>
+<h4>至此，可在PC宿主机使用浏览器进行登录<br>
 浏览器地址输入 192.168.56.10 即可</h4>
 ![](/assets/H3C/2024-08-07/image2.png)
 
-#### 3、启用自动AP && 自动固化 <br >无线配置-->AP管理-->AP全局配置<br> 打开自动AP可以自动添加AP<br> 打开自动固化可以方便后续手动配置
+#### 2、启用自动AP && 自动固化 <br >无线配置-->AP管理-->AP全局配置<br> 打开自动AP可以自动添加AP<br> 打开自动固化可以方便后续手工单独配置AP
 
 ![](/assets/H3C/2024-08-07/image3.png)
 
 <h4>可以看到AP已经成功添加</h4>
 ![](/assets/H3C/2024-08-07/image4.png)
 
-#### 4、创建 WLAN服务模板 <br>无线配置 --> 无线网络<br> 点击添加WLAN配置模板
+#### 3、创建 WLAN服务模板 <br>无线配置 --> 无线网络<br> 点击添加WLAN配置模板
 ![](/assets/H3C/2024-08-07/image5.png)
 
-<h4>需要添加模板名称和无线名称，开启无线服务，点击确定</h4>
+<h4>需要添加 WLAN模板名称 和 无线名称，开启 无线服务，点击确定</h4>
 ![](/assets/H3C/2024-08-07/image6.png)
 
-#### 5、配置WLAN <br> 无线配置-->AP管理-->AP组<br> 修改默认组</h4>
+#### 4、配置 WLAN <br> 无线配置 --> AP管理--> AP组<br> 点击修改默认组
 ![](/assets/H3C/2024-08-07/image7.png)
 
-<h4>需要指定AP的型号，以及要开启的频段<br>
+<h4>需要指定AP的型号，以及需要开启的频段<br>
 这里我们仅开启5Ghz radio 1<br>
 点击确定即可</h4>
 ![](/assets/H3C/2024-08-07/image8.png)
 
 <h4>点击无线服务配置<br>
-在5Ghz处点击添加</h4>
+在 5Ghz 处点击添加</h4>
 ![](/assets/H3C/2024-08-07/image9.png)
 
-<h4>选择创建的无线服务模板<br>
-VLAN不填的话，它默认属于VLAN1<br>
+<h4>选择创建的 WLAN无线服务模板<br>
+VLAN 不填的话，它默认属于 VLAN1<br>
 点击确定即可</h4>
 ![](/assets/H3C/2024-08-07/image10.png)
 
