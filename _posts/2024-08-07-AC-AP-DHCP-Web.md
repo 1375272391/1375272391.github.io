@@ -8,18 +8,16 @@ tags: HCL H3C AC AP DHCP default-group Web
 ---
 ![](/assets/H3C/2024-08-07/image12.png)
 #### 简要说明
-<h4>
-HCL 依赖于 VMBOX <br>
-我们直接使用VMBOX的DHCP服务<br>
+<h4>HCL 依赖于 VMBOX <br>
+我们直接使用VMBOX的DHCP服务</h4>
 ![](/assets/H3C/2024-08-07/image1.png)
-仅主机网卡地址为 192.168.56.1<br>
+<h4>仅主机网卡地址为 192.168.56.1<br>
 默认 DHCP 自动分配从 101 到 254<br>
 设置静态IP的时候避免使用这些地址<br>
 我们为 AC 设置同网段 静态IP 以便PC宿主机可以访问虚拟机<br>
 模拟器使用 Host本地主机 VMBOX仅主机网卡 连接AC</h4>
 
-
-#### AC Console 配置
+#### 1、AC Console 配置
 {% highlight cli %}
 <H3C>sy
 [H3C]int vl 1
@@ -27,7 +25,7 @@ HCL 依赖于 VMBOX <br>
 [H3C-Vlan-interface1]ip http enable ## 启用 http 
 {% endhighlight %}
 
-##### 创建Web管理账户
+#### 2、创建Web管理账户
 {% highlight cli %}
 [H3C]local-user admin class manage ## 配置用户分类
 [H3C-luser-manage-admin]authorization-attribute user-role network-admin ## 配置用户角色
@@ -39,33 +37,24 @@ HCL 依赖于 VMBOX <br>
 浏览器地址输入 192.168.56.10 即可</h4>
 ![](/assets/H3C/2024-08-07/image2.png)
 
-#### 启用自动AP && 自动固化
-<h4>
-无线配置-->AP管理-->AP全局配置<br>
-打开自动AP可以自动添加AP<br>
-打开自动固化可以方便后续手动配置</h4>
+#### 3、启用自动AP && 自动固化 <br >无线配置-->AP管理-->AP全局配置<br> 打开自动AP可以自动添加AP<br> 打开自动固化可以方便后续手动配置
 
 ![](/assets/H3C/2024-08-07/image3.png)
 
 <h4>可以看到AP已经成功添加</h4>
 ![](/assets/H3C/2024-08-07/image4.png)
 
-#### 创建 WLAN服务模板
-<h4>无线配置 --> 无线网络<br>
-点击添加WLAN配置模板</h4>
+#### 4、创建 WLAN服务模板 <br>无线配置 --> 无线网络<br> 点击添加WLAN配置模板</h4>
 ![](/assets/H3C/2024-08-07/image5.png)
 
 <h4>需要添加模板名称和无线名称，开启无线服务，点击确定</h4>
 ![](/assets/H3C/2024-08-07/image6.png)
 
-
-##### 配置WLAN
-<h4>无线配置-->AP管理-->AP组<br>
-修改默认组</h4>
+#### 5、配置WLAN <br> 无线配置-->AP管理-->AP组<br> 修改默认组</h4>
 ![](/assets/H3C/2024-08-07/image7.png)
 
-<h4>需要指定AP的型号，以及要开启的频段</h4>
-这里我们仅开启5Ghz radio 1</h4>
+<h4>需要指定AP的型号，以及要开启的频段<br>
+这里我们仅开启5Ghz radio 1<br>
 点击确定即可</h4>
 ![](/assets/H3C/2024-08-07/image8.png)
 
@@ -84,5 +73,5 @@ VLAN不填的话，它默认属于VLAN1<br>
 ![](/assets/H3C/2024-08-07/image13.png)
 
 
-#### 参考 [AC控制器3510怎么开启web登录][Web]
+#### 参考: <br> [AC控制器开启Web登录][Web]
 [Web]: https://zhiliao.h3c.com/questions/dispcont/115857
