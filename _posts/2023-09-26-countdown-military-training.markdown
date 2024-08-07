@@ -3,7 +3,7 @@ layout: post
 title:  "黑了黑了"
 author: XM137
 date:   2023-09-26 12:31:00 +0800
-categories: Daily
+categories: military-training
 tags: 黑
 ---
 又黑喽

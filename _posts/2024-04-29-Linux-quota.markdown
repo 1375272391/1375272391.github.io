@@ -3,7 +3,7 @@ layout: post
 title:  "Linux作业 项目五 作业二 磁盘限额配置"
 author: XM137
 date:   2024-04-29 22:21:00 +0800
-categories: Daily
+categories: CentOS-7
 tags: Linux CentOS7 fdisk quota
 ---
 1. (简答题)

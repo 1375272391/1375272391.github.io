@@ -3,7 +3,7 @@ layout: post
 title:  "作业3：Telnet远程登录实验"
 author: XM137
 date:   2024-03-07 23:00:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL
 ---
 ## 题目如下

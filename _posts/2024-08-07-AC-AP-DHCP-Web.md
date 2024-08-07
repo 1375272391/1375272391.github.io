@@ -3,7 +3,7 @@ layout: post
 title:  "AC+AP Web配置"
 author: XM137
 date:   2024-08-07 15:43:00 +0800
-categories: Daily
+categories: H3C
 tags: HCL H3C AC AP DHCP default-group Web
 ---
 ![](/assets/H3C/2024-08-07/image12.png)

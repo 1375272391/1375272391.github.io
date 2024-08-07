@@ -3,7 +3,7 @@ layout: post
 title:  "复习3：OSPF+链路聚合+VLAN综合"
 author: XM137
 date:   2024-07-01 19:51:00 +0800
-categories: Daily
+categories: H3C
 tags: HCL H3C OSPF EtherTrunk VLAN Review
 ---
 ### 注意： 按照学习通拓扑连线

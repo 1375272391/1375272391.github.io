@@ -3,7 +3,7 @@ layout: post
 title:  "作业14：链路聚合"
 author: XM137
 date:   2024-04-13 09:28:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL Eth-Trunk DHCP VLAN
 ---
 ## 题目

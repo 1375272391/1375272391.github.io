@@ -3,7 +3,7 @@ layout: post
 title:  "原神的新年"
 author: XM137
 date:   2024-02-24 21:29:00 +0800
-categories: Daily
+categories: Game
 tags: 原神 海灯节
 ---
 [2023上海原神交响音乐会][videolink] 璃月 <br>

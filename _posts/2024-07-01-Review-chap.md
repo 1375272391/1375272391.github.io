@@ -3,7 +3,7 @@ layout: post
 title:  "复习2：chap验证"
 author: XM137
 date:   2024-07-01 19:42:00 +0800
-categories: Daily
+categories: H3C
 tags: HCL H3C ppp chap Review
 ---
 ### 注意： 按照学习通拓扑连线

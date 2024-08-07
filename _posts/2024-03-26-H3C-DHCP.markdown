@@ -3,7 +3,7 @@ layout: post
 title:  "作业9：DHCP实验"
 author: XM137
 date:   2024-03-26 19:49:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL DHCP
 ---
 > 按照拓扑配置实验。

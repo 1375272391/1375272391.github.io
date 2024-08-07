@@ -3,7 +3,7 @@ layout: post
 title:  "项目五 作业四 逻辑卷LVM配置"
 author: XM137
 date:   2024-05-11 23:08:00 +0800
-categories: Daily
+categories: CentOS-7
 tags: CentOS7 LVM
 ---
 

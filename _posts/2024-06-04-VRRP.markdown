@@ -3,7 +3,7 @@ layout: post
 title:  "作业28：VRRP实验"
 author: XM137
 date:   2024-06-04 19:40:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL OSPF VRRP
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "复习1：DHCP"
 author: XM137
 date:   2024-06-19 23:12:00 +0800
-categories: Daily
+categories: H3C
 tags: HCL H3C DHCP Review
 ---
 

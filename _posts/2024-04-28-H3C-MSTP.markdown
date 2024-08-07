@@ -3,7 +3,7 @@ layout: post
 title:  "作业17：生成树实验"
 author: XM137
 date:   2024-04-28 23:29:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL MSTP
 ---
 ## 1、

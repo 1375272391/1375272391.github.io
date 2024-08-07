@@ -3,7 +3,7 @@ layout: post
 title:  "关于Linux 软件包"
 author: XM137
 date:   2024-06-07 11:26:00 +0800
-categories: Daily
+categories: Linux
 tags: Linux Package deb rpm appimage
 ---
 

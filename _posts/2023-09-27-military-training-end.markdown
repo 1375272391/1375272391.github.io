@@ -3,7 +3,7 @@ layout: post
 title:  "军训结束"
 author: XM137
 date:   2023-09-27 12:31:00 +0800
-categories: Daily
+categories: military-training
 tags: 军训 结束
 ---
 上图<br>

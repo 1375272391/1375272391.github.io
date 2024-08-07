@@ -3,7 +3,7 @@ layout: post
 title:  "结束"
 author: XM137
 date:   2023-08-02 17:15:00 +0800
-categories: Daily
+categories: School-Life
 tags: 高中生活 结束 毕业
 ---
 唉，最后再来看一眼<br>

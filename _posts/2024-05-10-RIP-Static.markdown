@@ -3,7 +3,7 @@ layout: post
 title:  "20240510-H3C随堂练习"
 author: XM137
 date:   2024-05-10 13:14:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL RIP Static
 ---
 

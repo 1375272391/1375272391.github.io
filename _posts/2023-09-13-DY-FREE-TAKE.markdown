@@ -3,7 +3,7 @@ layout: post
 title:  "电院日常随拍"
 author: XM137
 date:   2023-09-13 21:31:00 +0800
-categories: Daily
+categories: School-Life
 tags: 学校 日常 随拍 每日一糊
 ---
 上图 <br>

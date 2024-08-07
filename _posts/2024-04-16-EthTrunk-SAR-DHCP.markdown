@@ -3,7 +3,7 @@ layout: post
 title:  "H3C网络技术（233,234,235）-阶段测试卷1"
 author: XM137
 date:   2024-04-16 13:19:00 +0800
-categories: Daily
+categories: H3C
 tags: H3C HCL Eth-Trunk DHCP RouterOnAStick VLAN
 ---
 ## 题目拓扑

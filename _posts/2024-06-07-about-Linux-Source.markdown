@@ -3,7 +3,7 @@ layout: post
 title:  "关于Linux 软件源"
 author: XM137
 date:   2024-06-07 00:13:00 +0800
-categories: Daily
+categories: Linux
 tags: Linux Source Mirror
 ---
 # 软件源

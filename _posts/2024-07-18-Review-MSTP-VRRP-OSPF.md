@@ -3,7 +3,7 @@ layout: post
 title:  "复习4：mstp+Vrrp"
 author: XM137
 date:   2024-07-18 17:00:00 +0800
-categories: Daily
+categories: H3C
 tags: HCL H3C MSTP VRRP OSPF Review
 ---
 <h3>在假期</h3>
