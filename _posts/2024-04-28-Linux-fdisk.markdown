@@ -3,7 +3,7 @@ layout: post
 title:  "Linux作业 项目五 作业一 磁盘分区与格式化"
 author: XM137
 date:   2024-04-28 22:14:00 +0800
-categories: CentOS7
+categories: CentOS-7
 tags: Linux CentOS7 fdisk
 ---
 > 项目五 作业一 磁盘分区与格式化

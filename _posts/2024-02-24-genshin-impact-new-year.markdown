@@ -20,6 +20,6 @@ https://www.bilibili.com/video/BV1Rj411p7b1/?t=137.1&p=16
 
 ![Screenshot_2024-02-24-20-37-05-592_com.miHoYo.ys.mi.jpg](/assets/Daily-image/20240224/Screenshot_2024-02-24-20-37-05-592_com.miHoYo.ys.mi.jpg) <br>
 ![Screenshot_2024-02-24-21-28-47-987_com.miHoYo.ys.mi.jpg](/assets/Daily-image/20240224/Screenshot_2024-02-24-21-28-47-987_com.miHoYo.ys.mi.jpg) <br>
-#### 归根结底似乎都是人，与家人团聚，热热闹闹，其乐融融 <br> 新颖的春晚，平日里见不到的人、做不了的事、过年的新衣服、新玩具、新事物、压岁钱、以及平时无法去做的新趣事、新体验 <br>
+#### 归根结底都是人，与家人团聚，热热闹闹，其乐融融 <br> 新颖的春晚，平日里见不到的人、做不了的事、过年的新衣服、新玩具、新事物、压岁钱、以及平时无法去做的新趣事、新体验 <br>
 
 [videolink]:https://www.bilibili.com/video/BV1Rj411p7b1/?t=2700.7
