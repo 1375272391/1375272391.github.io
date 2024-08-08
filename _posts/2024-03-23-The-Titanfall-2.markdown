@@ -3,7 +3,7 @@ layout: post
 title:  "“协议三：保护铁驭”"
 author: XM137
 date:   2024-03-23 22:41:00 +0800
-categories: Game
+categories: Gaming
 tags: Gaming Titan Titanfall2
 ---
 
