@@ -45,7 +45,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/16.jpg)
 <h4>库伯：布里格斯指挥官说会分发我到掠夺者军团并分配到一具新的泰坦...</h4><br>
 ![](/assets/Gaming/Titanfall2/20240817/17.jpg)
-<h4>库伯：不过科技部门要先清除我跟BT间的神经连接。</h4><br>
+<h4>库伯：...不过科技部门要先清除我跟BT间的神经连接。</h4><br>
 ![](/assets/Gaming/Titanfall2/20240817/18.jpg)
 <h4>"库伯：我不知道...有新的泰坦是什么感觉...我还蛮欢这台旧的。"</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/19.jpg)
