@@ -49,7 +49,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/18.jpg)
 <h4>"库伯：我不知道...有新的泰坦是什么感觉...我还蛮欢这台旧的。"</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/19.jpg)
-<h4>库伯：这里是铁驭杰克库伯，结束通话。</h4> <br>
+<h4>库伯：这是铁驭杰克库伯，结束通话。</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/20.jpg)<br>
 ![](/assets/Gaming/Titanfall2/20240817/22.jpg)<br>
 ![](/assets/Gaming/Titanfall2/20240817/23.jpg)<br>
