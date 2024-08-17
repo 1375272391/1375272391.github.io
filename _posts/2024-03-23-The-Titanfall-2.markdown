@@ -32,12 +32,15 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/ttf2-2.jpg)
 <h4>莎拉：很多人欠你一条命。</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/14.jpg)
-<h4>莎拉：还有BT...</h4> <br>
+<h4>莎拉：还有 BT...</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/21.jpg)
-<h4> 库伯的日志 </h4>
-> 很多人说他们欠我一条命，他们错了，他们的命是很多人一起救的，第九舰队的男男女女都在提丰星上战死了，其中包含着一具拯救我的先锋级泰坦。 <br> 
-> 他们才是提丰星之战的英雄。<br>
+<h4>库伯的日志 </h4>
+> 很多人说他们欠我一条命，他们错了，他们的命是很多人一起救的，第9舰队的男男女女都在提丰星上战死了，其中包含着一具拯救我的先锋级泰坦。 <br> 
+> <br>
+> 他们才是提丰星之战的真英雄。<br>
+> <br>
 > 我敬你，BT。不管反抗军将派遣我到哪里，我都不会让你失望的。<br>
+> <br>
 > 相信我。 <br>
 
 ![](/assets/Gaming/Titanfall2/20240817/15.jpg)
@@ -45,7 +48,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/16.jpg)
 <h4>库伯：布里格斯指挥官说会分发我到掠夺者军团并分配到一具新的泰坦...</h4><br>
 ![](/assets/Gaming/Titanfall2/20240817/17.jpg)
-<h4>库伯：...不过科技部门要先清除我跟BT间的神经连接。</h4><br>
+<h4>库伯：...不过科技部门会先清除我跟BT间的神经连接。</h4><br>
 ![](/assets/Gaming/Titanfall2/20240817/18.jpg)
 <h4>"库伯：我不知道...有新的泰坦是什么感觉...我还蛮欢这台旧的。"</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/19.jpg)
