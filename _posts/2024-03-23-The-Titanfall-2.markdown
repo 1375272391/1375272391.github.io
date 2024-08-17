@@ -30,7 +30,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/ttf2-1.jpg)
 <h4>莎拉：库伯铁驭。</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/ttf2-2.jpg)
-<h4>莎拉：很多人欠你一条命</h4> <br>
+<h4>莎拉：很多人欠你一条命。</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/14.jpg)
 <h4>莎拉：还有BT...</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/21.jpg)
@@ -58,7 +58,11 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/26.jpg)<br>
 ![](/assets/Gaming/Titanfall2/20240817/27.jpg)<br>
 ![](/assets/Daily-image/20240323/28.jpg)<br>
+
+![](/assets/Daily-image/20240323/30-1.jpg)
+#### Jack? 
 ![](/assets/Daily-image/20240323/29.jpg)
+
 
 #### 回到主界面的那一刻，仿佛失去一切<br> 失去之物，总是如此重要<br> 是回忆啊....<br> 
 <br>
