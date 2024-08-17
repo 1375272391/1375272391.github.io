@@ -15,7 +15,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/4.jpg)
 <h4>BT: 嗨，杰克。</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/5.jpg)
-<h4>库伯：别担心，我哪里也不去</h4> <br>
+<h4>库伯：别担心BT，我哪里也不去</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/6.jpg)
 <h4>BT：收到，铁驭</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/7.jpg)<br>
@@ -32,7 +32,7 @@ tags: Gaming Titan Titanfall2
 ![](/assets/Gaming/Titanfall2/20240817/ttf2-2.jpg)
 <h4>莎拉：很多人欠你一条命</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/14.jpg)
-<h4>莎拉：还有BT</h4> <br>
+<h4>莎拉：还有BT...</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/21.jpg)
 <h4> 库伯的日志 </h4>
 > 很多人说他们欠我一条命，他们错了，他们的命是很多人一起救的，第九舰队的男男女女都在提丰星上战死了，其中包含着一具拯救我的先锋级泰坦。 <br> 
