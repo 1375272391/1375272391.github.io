@@ -12,7 +12,7 @@ tags: Gaming Titan Titanfall2
 <h4> BT-7274: <br>相信我</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/2.jpg)<br>
 ![](/assets/Gaming/Titanfall2/20240817/3.jpg)<br>
-![](/assets/Gaming/Titanfall2/20240817/4.jpg)<br>
+![](/assets/Gaming/Titanfall2/20240817/4.jpg)
 <h4>BT: 嗨，杰克。</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/5.jpg)
 <h4>库伯：别担心，我哪里也不去</h4> <br>
@@ -35,10 +35,10 @@ tags: Gaming Titan Titanfall2
 <h4>莎拉：还有BT</h4> <br>
 ![](/assets/Gaming/Titanfall2/20240817/21.jpg)
 <h4> 库伯的日志 </h4>
-> 很多人说他们欠我一条命，他们错了，他们的命是很多人一起救的，第九船队的男男女女都在提丰星上战死了，其中包含着一具拯救我的先锋级泰坦 <br> 
+> 很多人说他们欠我一条命，他们错了，他们的命是很多人一起救的，第九舰队的男男女女都在提丰星上战死了，其中包含着一具拯救我的先锋级泰坦。 <br> 
 > 他们才是提丰星之战的英雄。<br>
 > 我敬你，BT。不管反抗军将派遣我到哪里，我都不会让你失望的。<br>
-> 相信我 <br>
+> 相信我。 <br>
 
 ![](/assets/Gaming/Titanfall2/20240817/15.jpg)
 <h4>沙拉：霸克。设定到哈莫尼星的航线。带我们回家。</h4> <br>
