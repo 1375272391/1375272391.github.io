@@ -53,8 +53,8 @@ tags: ENSP Static Telnet
 [HZ-SW1-ZXB-ui-console0]return 
 <HZ-SW1-ZXB>sy
 [HZ-SW1-ZXB]aaa
-[HZ-SW1-ZXB-aaa]local-user zxb password cipher zxb@234 ## user后跟用户名 cipher 跟密码
-[HZ-SW1-ZXB-aaa]local-user zxb privilege level 15 ## 请根据实际情况修改密码
+[HZ-SW1-ZXB-aaa]local-user zxb password cipher zxb@234 ## user后跟用户名 cipher 跟密码 请根据实际情况修改密码
+[HZ-SW1-ZXB-aaa]local-user zxb privilege level 15 ## 设置权限等级
 [HZ-SW1-ZXB-aaa]local-user zxb service-type telnet 
 {% endhighlight %}
 
@@ -131,7 +131,7 @@ ping 16.12.30.10
 ```
 
 ### Telnet SW2 
-### 在SW2 上测试
+### 在 SW2 上测试
 {% highlight cli %}
 [HX-SW2-ZXB]return ## 返回用户视图
 <HX-SW2-ZXB>telnet 10.10.1.1 ## 输入用户名密码
