@@ -10,9 +10,13 @@ tags: ENSP Static Telnet
 > 按要求完成作业：截图上传全部配置以及测试联通的结果。
 > 
 > 交换机名HZ-SW1-XXX中的XXX是姓名首字母
+> 
 > 使用静态路由
+> 
 > 核心交换机配置te1net远程登陆:
+> 
 > 用户名认证方式为AAA 用户名为姓名首字母，密码为姓名首字母@234 
+> 
 > 加密形式为cipher 用户权限等级为15 最多支持5个用户同时访问
 
 
@@ -49,7 +53,7 @@ tags: ENSP Static Telnet
 [HZ-SW1-ZXB-ui-console0]return 
 <HZ-SW1-ZXB>sy
 [HZ-SW1-ZXB]aaa
-[HZ-SW1-ZXB-aaa]local-user zxb password cipher zxb@234 ## user后跟用户名 password 跟密码
+[HZ-SW1-ZXB-aaa]local-user zxb password cipher zxb@234 ## user后跟用户名 cipher 跟密码
 [HZ-SW1-ZXB-aaa]local-user zxb privilege level 15 ## 请根据实际情况修改密码
 [HZ-SW1-ZXB-aaa]local-user zxb service-type telnet 
 {% endhighlight %}
