@@ -118,7 +118,7 @@ tags: ENSP OSPF Multi-Area
 [HZ-xiaoyuan-Core02-ZXB-GigabitEthernet0/0/1]ospf
 [HZ-xiaoyuan-Core02-ZXB-ospf-1]a 0
 [HZ-xiaoyuan-Core02-ZXB-ospf-1-area-0.0.0.0]n 10.1.3.3 0.0.0.0
-[HZ-xiaoyuan-Core02-ZXB-ospf-1-area-0.0.0.0]n 10.1.13.2 0.0.0.255
+[HZ-xiaoyuan-Core02-ZXB-ospf-1-area-0.0.0.0]n 10.1.13.0 0.0.0.255
 [HZ-xiaoyuan-Core02-ZXB-ospf-1-area-0.0.0.0]q
 [HZ-xiaoyuan-Core02-ZXB-ospf-1]a 100
 [HZ-xiaoyuan-Core02-ZXB-ospf-1-area-0.0.0.100]n 10.1.37.3 0.0.0.255
