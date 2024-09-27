@@ -178,8 +178,8 @@ ping 192.168.10.10 -t
 ## ping测试连通后，关闭Agg01 监视口 G0/0/8 
 [Agg01]interface GigabitEthernet 0/0/8
 [Agg01-GigabitEthernet0/0/8]shut
-等待重新连通，可能耗时较长
-重新连通后，重新打开端口，进行下一轮测试
+## 等待重新连通，可能耗时较长
+## 重新连通后，重新打开端口，进行下一轮测试
 [Agg01-GigabitEthernet0/0/8]undo shut
 {% endhighlight %}
 
