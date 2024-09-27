@@ -1,6 +1,6 @@
 ---
 layout: about
-title: 关于作者
+title: 关于
 ---
 
 <h2>关于</h2>
