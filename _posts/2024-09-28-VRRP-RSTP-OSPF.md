@@ -21,6 +21,7 @@ tags: ENSP RSTP VRRP OSPF
 |    PC_3     |     17.16.50.10    |   255.255.255.0    |     17.16.50.1     |
 
 
+### R1
 {% highlight cli %}
 <Huawei>sy
 [Huawei]sysn R1
@@ -43,7 +44,7 @@ tags: ENSP RSTP VRRP OSPF
 {% endhighlight %}
 
 
-
+### Agg01
 {% highlight cli %}
 <Huawei>sy
 [Huawei]un in e
@@ -84,6 +85,7 @@ tags: ENSP RSTP VRRP OSPF
 {% endhighlight %}
 
 
+### Agg02
 {% highlight cli %}
 <Huawei>sy
 [Huawei]un in e
@@ -124,6 +126,7 @@ tags: ENSP RSTP VRRP OSPF
 {% endhighlight %}
 
 
+### Acc01
 {% highlight cli %}
 <Huawei>sy
 [Huawei]un in e
@@ -145,6 +148,7 @@ tags: ENSP RSTP VRRP OSPF
 {% endhighlight %}
 
 
+### Acc02
 {% highlight cli %}
 <Huawei>sy
 [Huawei]un in e
