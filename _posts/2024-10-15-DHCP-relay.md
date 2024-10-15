@@ -35,6 +35,7 @@ tags: ENSP DHCP-Relay OSPF
 [select01-Vlanif10]dhcp server dns-list 192.168.10.253
 [select01-Vlanif10]dhcp server ex 192.168.10.253
 [select01-Vlanif10]dhcp server ex 192.168.10.252
+[select01-Vlanif10]dhcp ser l d 1
 [select01-Vlanif10]int v100
 [select01-Vlanif100]ip a 17.16.5.5 24
 [select01-Vlanif100]int g0/0/5
@@ -65,6 +66,7 @@ tags: ENSP DHCP-Relay OSPF
 [edge01-ip-pool-V40]g 192.168.40.1 
 [edge01-ip-pool-V40]d 192.168.40.254
 [edge01-ip-pool-V40]e 192.168.40.254
+[edge01-ip-pool-V40]l d 1
 [edge01-ip-pool-V40]int g0/0/0
 [edge01-GigabitEthernet0/0/0]dhcp se gl
 [edge01-GigabitEthernet0/0/0]ospf 
