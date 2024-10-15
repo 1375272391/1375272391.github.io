@@ -7,7 +7,6 @@ categories: ENSP
 tags: ENSP DHCP-Relay OSPF
 ---
 
-
 > DHCP 中继实验
 > 
 > PC机地址均由DHCP分配
@@ -16,6 +15,12 @@ tags: ENSP DHCP-Relay OSPF
 > 
 > 请在PC机执行 `ipconfig` 查看IP地址
 > 
+
+---
+
+### 拓扑 **[1015.zip](/assets/ENSP/20241015/1015.zip)**
+
+---
 
 ### select01
 {% highlight cli %}
@@ -156,8 +161,4 @@ tags: ENSP DHCP-Relay OSPF
 
 ## ping 测试
 ### 在其余 `PC` 使用 `ipconfig` 获取到IP地址后
-### 在PC4逐一　`ping` 测试即可
-
----
-
-### 拓扑 **[1015.zip](/assets/ENSP/20241015/1015.zip)**
+### 在PC4逐一 `ping` 测试即可
