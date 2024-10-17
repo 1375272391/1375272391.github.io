@@ -31,10 +31,10 @@ tags: ENSP DHCP-Relay OSPF
 [select01]dhcp ena
 [select01]int v 10
 [select01-Vlanif10]ip a 192.168.10.254 24
-[select01-Vlanif10]dhcp select interface 
-[select01-Vlanif10]dhcp server dns-list 192.168.10.253
-[select01-Vlanif10]dhcp server ex 192.168.10.253
-[select01-Vlanif10]dhcp server ex 192.168.10.252
+[select01-Vlanif10]dhcp se in 
+[select01-Vlanif10]dhcp ser dns-list 192.168.10.253
+[select01-Vlanif10]dhcp ser ex 192.168.10.253
+[select01-Vlanif10]dhcp ser ex 192.168.10.252
 [select01-Vlanif10]dhcp ser l d 1
 [select01-Vlanif10]int v100
 [select01-Vlanif100]ip a 17.16.5.5 24
@@ -63,7 +63,7 @@ tags: ENSP DHCP-Relay OSPF
 [edge01-GigabitEthernet0/0/0]dhcp ena
 [edge01]ip pool V40
 [edge01-ip-pool-V40]net 192.168.40.0 m 24
-[edge01-ip-pool-V40]g 192.168.40.1 
+[edge01-ip-pool-V40]g 192.168.40.1
 [edge01-ip-pool-V40]d 192.168.40.254
 [edge01-ip-pool-V40]e 192.168.40.254
 [edge01-ip-pool-V40]l d 1
@@ -106,13 +106,11 @@ tags: ENSP DHCP-Relay OSPF
 [global-Vlanif100]ip a 17.16.3.2 30
 [global-Vlanif100]int v 20
 [global-Vlanif20]ip a 10.10.20.1 24
-[global-Vlanif20]int v 30
-[global-Vlanif30]ip a 10.10.30.1 24
-[global-Vlanif30]int v20
 [global-Vlanif20]dhcp se in
 [global-Vlanif20]dhcp server d 114.114.114.114
 [global-Vlanif20]dhcp ser l d 1
-[global-Vlanif20]int v30
+[global-Vlanif20]int v 30
+[global-Vlanif30]ip a 10.10.30.1 24
 [global-Vlanif30]dhcp se in
 [global-Vlanif30]dhcp ser d 114.114.114.114
 [global-Vlanif30]dhcp ser l d 1
@@ -122,7 +120,7 @@ tags: ENSP DHCP-Relay OSPF
 [global-GigabitEthernet0/0/5]int g0/0/6
 [global-GigabitEthernet0/0/6]port l a
 [global-GigabitEthernet0/0/6]port d v 30
-[global-GigabitEthernet0/0/6]int g0/0/01
+[global-GigabitEthernet0/0/6]int g0/0/1
 [global-GigabitEthernet0/0/1]port l a
 [global-GigabitEthernet0/0/1]port d v 100
 [global-GigabitEthernet0/0/1]ospf 
