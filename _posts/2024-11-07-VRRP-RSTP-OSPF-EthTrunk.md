@@ -116,7 +116,7 @@ tags: ENSP VRRP RSTP OSPF Eth-Trunk
 
 ---
 
-## 3.IP编址
+## 4.IP编址
 ### HZ-HZXiaoYuan-Edge01-AR6140
 {% highlight cli %}
 <Huawei>sy
