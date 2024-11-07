@@ -32,7 +32,7 @@ author: XM137
 copyright: "Copyleft (cleft) 2017-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  阿弥诺斯，就现在，等什么呢
+  准备好，迎接每一天
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
