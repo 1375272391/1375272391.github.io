@@ -7,7 +7,7 @@ categories: ENSP
 tags: ENSP VRRP RSTP OSPF Eth-Trunk
 ---
 
-## 拓扑 **[2215.zip](/assets/ENSP/20241107/2215.zip)**
+## 拓扑 **[2215.zip](/assets/ENSP/20241107/2215.zip)** <br> 试题 **[Lssue2.0](/assets/ENSP/20241107/Lssue2.0.rar)**
 
 ---
 ## PC 地址配置
