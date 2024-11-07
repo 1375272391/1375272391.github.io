@@ -4,6 +4,8 @@ title: 关于
 ---
 
 <h2>关于</h2>
+<h3>准备好，迎接每一天</h3>
+
 <h3>拒绝精神内耗，从现在开始。拥抱美好人生，从行动开始</h3>
 
 #### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] <br> 同时感谢[Cloudflare][CF]
