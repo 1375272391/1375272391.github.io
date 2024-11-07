@@ -134,7 +134,7 @@ tags: ENSP VRRP RSTP OSPF Eth-Trunk
 [HZ-HZXiaoYuan-Edge01-AR6140-LoopBack0]ip a 10.1.1.1 32
 {% endhighlight %}
 
-#### HZ-HZXiaoYuan-Core01-AR6140
+### HZ-HZXiaoYuan-Core01-AR6140
 {% highlight cli %}
 <Huawei>sy
 [Huawei]u in e
