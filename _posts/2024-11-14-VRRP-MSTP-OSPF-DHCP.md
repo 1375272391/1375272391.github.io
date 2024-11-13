@@ -55,7 +55,6 @@ tags: ENSP VRRP MSTP OSPF DHCP
 [SZ-Acc02-GigabitEthernet0/0/1]int g0/0/2
 [SZ-Acc02-GigabitEthernet0/0/2]port l a
 [SZ-Acc02-GigabitEthernet0/0/2]port d v 100
-[SZ-Acc02-GigabitEthernet0/0/2]
 {% endhighlight %}
 
 ### SZ-Acc03
