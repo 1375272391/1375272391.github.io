@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "作业17：1+X操作（任务6-9）"
+title:  "作业17：1+X操作"
 author: XM137
-date:   2024-11-17 00:15:00 +0800
+date:   2024-11-14 00:15:00 +0800
 categories: ENSP
 tags: ENSP VRRP MSTP OSPF DHCP
 ---
@@ -55,7 +55,6 @@ tags: ENSP VRRP MSTP OSPF DHCP
 [SZ-Acc02-GigabitEthernet0/0/1]int g0/0/2
 [SZ-Acc02-GigabitEthernet0/0/2]port l a
 [SZ-Acc02-GigabitEthernet0/0/2]port d v 100
-[SZ-Acc02-GigabitEthernet0/0/2]
 {% endhighlight %}
 
 ### SZ-Acc03
@@ -71,7 +70,6 @@ tags: ENSP VRRP MSTP OSPF DHCP
 [SZ-Acc03-GigabitEthernet0/0/1]int g0/0/2
 [SZ-Acc03-GigabitEthernet0/0/2]port l a
 [SZ-Acc03-GigabitEthernet0/0/2]port d v 101
-[SZ-Acc03-GigabitEthernet0/0/2]
 {% endhighlight %}
 
 ### SZ-Edu-SW1
@@ -185,14 +183,6 @@ tags: ENSP VRRP MSTP OSPF DHCP
 [SZ-Acc01]stp m m
 [SZ-Acc01]port-g g e 0/0/1 t e 0/0/2
 [SZ-Acc01-port-group]stp e e
-[SZ-Acc01-Ethernet0/0/1]stp e e
-[SZ-Acc01-Ethernet0/0/2]stp e e
-[SZ-Acc01-port-group]stp e e
-[SZ-Acc01-Ethernet0/0/1]stp e e
-[SZ-Acc01-Ethernet0/0/2]stp e e
-[SZ-Acc01-port-group]stp e e
-[SZ-Acc01-Ethernet0/0/1]stp e e
-[SZ-Acc01-Ethernet0/0/2]stp e e
 {% endhighlight %}
 
 
