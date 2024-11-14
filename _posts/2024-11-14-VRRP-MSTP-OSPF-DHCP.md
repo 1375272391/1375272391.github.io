@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "作业17：1+X操作（任务6-9）"
+title:  "作业17：1+X操作"
 author: XM137
 date:   2024-11-14 00:15:00 +0800
 categories: ENSP
