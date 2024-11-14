@@ -323,8 +323,8 @@ tags: ENSP VRRP MSTP OSPF DHCP
 [SZ-Acc02]dhcp e
 [SZ-Acc02]ip p ACC02-DHCP
 [SZ-Acc02-ip-pool-acc02-dhcp]n 192.168.1.0 m 24
-[SZ-Acc02-ip-pool-acc02-dhcp]g 192.168.1.1
-[SZ-Acc02-ip-pool-acc02-dhcp]e 192.168.1.2 192.168.1.100
+[SZ-Acc02-ip-pool-acc02-dhcp]g 192.168.1.254
+[SZ-Acc02-ip-pool-acc02-dhcp]e 192.168.1.1 192.168.1.100
 [SZ-Acc02-ip-pool-acc02-dhcp]int v10
 [SZ-Acc02-Vlanif10]dhcp se g
 {% endhighlight %}
@@ -332,9 +332,12 @@ tags: ENSP VRRP MSTP OSPF DHCP
 ### SZ-Acc03
 {% highlight cli %}
 [SZ-Acc03]dhcp e
-[SZ-Acc03]int v20
-[SZ-Acc03-Vlanif20]dhcp se i
-[SZ-Acc03-Vlanif20]dhcp s e 192.168.2.2 192.168.2.100
+[SZ-Acc03]ip p ACC03-DHCP
+[SZ-Acc03-ip-pool-acc03-dhcp]n 192.168.2.0 m 24
+[SZ-Acc03-ip-pool-acc03-dhcp]g 192.168.2.254
+[SZ-Acc03-ip-pool-acc03-dhcp]e 192.168.2.1 192.168.2.100
+[SZ-Acc03-ip-pool-acc03-dhcp]int v20
+[SZ-Acc03-Vlanif20]dhcp se g
 {% endhighlight %}
 
 
