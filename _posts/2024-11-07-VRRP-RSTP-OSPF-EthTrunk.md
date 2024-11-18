@@ -397,6 +397,3 @@ tags: ENSP VRRP RSTP OSPF Eth-Trunk
 [HZ-HZXiaoYuan-Edge01-AR6140]ospf
 [HZ-HZXiaoYuan-Edge01-AR6140-ospf-1]import-route static ty 1
 {% endhighlight %}
-
-
-
