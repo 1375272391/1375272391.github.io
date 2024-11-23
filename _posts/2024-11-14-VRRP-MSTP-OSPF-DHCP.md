@@ -360,8 +360,6 @@ stp en
 stp m m
 port-g g e 0/0/1 t e 0/0/2
 stp e e
-stp e e
-stp e e
 {% endhighlight %}
 </details>
 
