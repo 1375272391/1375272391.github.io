@@ -18,7 +18,8 @@ tags: ENSP Policy-Based_Routing
 |    PC_2     |    192.168.10.2    |   255.255.255.0    |   192.168.10.254   |
 |    PC_3     |    172.16.100.2    |   255.255.255.0    |    172.16.100.1    |
 
-
+## 策略路由需要明确 给谁做策略(traffic classifier) 要干什么 (traffic behavior)
+## 最后将其做成策略(traffic policy) 并应用到相应位置
 
 ## SW1
 {% highlight cli %}
@@ -90,25 +91,25 @@ n 101.101.1.0 0.0.0.255
 [AR3-ospf-1-area-0.0.0.0]n 101.101.1.0 0.0.0.255
 [AR3-ospf-1-area-0.0.0.0]q
 [AR3-ospf-1]q
-[AR3]acl 2000
+[AR3]acl 2000 ## 使用两个ACL分别指定
 [AR3-acl-basic-2000]rule p s 192.168.10.1 0
 [AR3-acl-basic-2000]acl 2001
 [AR3-acl-basic-2001]rule p s 192.168.10.2 0
 [AR3-acl-basic-2001]q
-[AR3]traffic c 101
+[AR3]traffic c 101 ## 流 类 确定给谁做策略
 [AR3-classifier-101]if a 2000
 [AR3-classifier-101]traff c 102
 [AR3-classifier-102]if a 2001
-[AR3-classifier-102]traff b 1002
-[AR3-behavior-1002]red ip-nexthop 100.1.1.2
+[AR3-classifier-102]traff b 1002 ## 流行为 确定要做什么
+[AR3-behavior-1002]red ip-nexthop 100.1.1.2 ## 重定向
 [AR3-behavior-1002]traff b 2002
 [AR3-behavior-2002]redirect ip-nexthop 200.1.1.2
 [AR3-behavior-2002]q
-[AR3]traffic policy PBR
+[AR3]traffic policy PBR ## 流策略 绑定类与行为
 [AR3-trafficpolicy-PBR]c 101 b 1002
 [AR3-trafficpolicy-PBR]c 102 b 2002
 [AR3-trafficpolicy-PBR]int g0/0/0
-[AR3-GigabitEthernet0/0/0]traffic-policy PBR i
+[AR3-GigabitEthernet0/0/0]traffic-policy PBR i ## 应用流策略
 {% endhighlight %}
 <details>
 <summary>纯文本配置</summary>
@@ -170,7 +171,7 @@ traffic-policy PBR i
 [AR4-ospf-1-area-0.0.0.0]n 172.16.100.0 0.0.0.255
 [AR4-ospf-1-area-0.0.0.0]q
 [AR4-ospf-1]q
-[AR4]acl 3000
+[AR4]acl 3000 ## 为满足题目要求，使用高级ACL 确定目标地址
 [AR4-acl-adv-3000]rule p ip dest 192.168.10.1 0
 [AR4-acl-adv-3000]acl 3001
 [AR4-acl-adv-3001]rule per ip dest 192.168.10.2 0
