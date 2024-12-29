@@ -18,8 +18,8 @@ tags: ENSP Policy-Based_Routing
 |    PC_2     |    192.168.10.2    |   255.255.255.0    |   192.168.10.254   |
 |    PC_3     |    172.16.100.2    |   255.255.255.0    |    172.16.100.1    |
 
-## 策略路由需要明确 给谁做策略(traffic classifier) 要干什么 (traffic behavior)
-## 最后将其做成策略(traffic policy) 并应用到相应位置
+## 策略路由需要明确 <br> 给谁做策略(traffic classifier) <br> 要干什么 (traffic behavior)
+## 最后将其做成策略(traffic policy) <br> 并应用到相应位置
 
 ## SW1
 {% highlight cli %}
