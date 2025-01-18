@@ -32,7 +32,7 @@ author: XM137
 copyright: "Copyleft (cleft) 2017-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  新的一年，崭新的开篇
+  前行，并为之付诸行动
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -145,7 +145,7 @@ header_pages:
 defaults:
    home:
      heading: "向前，并不断进步"
-     subheading: "奔跑吧，加油！"
+     subheading: "我之青年，迸发无限活力，尽显无尽可能"
      banner: "/assets/mountains-5626734_1280.jpg"
 
 # Banner default settings
