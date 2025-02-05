@@ -229,5 +229,5 @@ plugins:
 timezone: Asia/Shanghai
 
 # baidu verify
-keep_files: [baidu_verify_codeva-H0cTVyuWvb.html]
+keep_files: [baidu_verify_codeva-H0cTVyuWvb.html.html]
 
