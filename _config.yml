@@ -148,7 +148,7 @@ defaults:
    home:
      heading: "向前，并不断进步"
      subheading: "我之青年，迸发无限活力，尽显无尽可能"
-     banner: "/assets/mountains-5626734_1280.jpg"
+     banner: "/assets/mountains-5626734_1280.webp"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
