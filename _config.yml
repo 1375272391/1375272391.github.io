@@ -227,3 +227,7 @@ plugins:
 
 # TZ
 timezone: Asia/Shanghai
+
+# baidu verify
+keep_files: [baidu_verify_codeva-H0cTVyuWvb.html]
+
