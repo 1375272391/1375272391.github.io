@@ -56,7 +56,9 @@ yat:
 # enableDNT: "false"
 
 # If you want to generate website sitemap, you can set true
-# sitemap: false
+sitemap: true
+
+url: "https://xm137.org.cn"
 
 # If you want to change site language, you can set lang option
 lang: "zh"  
@@ -146,7 +148,7 @@ defaults:
    home:
      heading: "向前，并不断进步"
      subheading: "我之青年，迸发无限活力，尽显无尽可能"
-     banner: "/assets/mountains-5626734_1280.jpg"
+     banner: "/assets/mountains-5626734_1280.webp"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
@@ -227,3 +229,7 @@ plugins:
 
 # TZ
 timezone: Asia/Shanghai
+
+# baidu verify
+keep_files: [robots.txt, baidu_verify_codeva-H0cTVyuWvb.html.html]
+
