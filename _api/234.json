@@ -43,19 +43,5 @@ layout: null
 	  { "id":41, "name":"袁能浩" },
 	  { "id":42, "name":"范昌彬" },
 	  { "id":44, "name":"韩红" }
-  ],
-  "其他班级": [
-	  { "id":1, "name":"张三" },
-	  { "id":2, "name":"李四" }
-  ],
-  "网络xx": [
-      { "id":1, "name":"xxxxxxx" },
-      { "id":2, "name":"xxxx" },
-      { "id":3, "name":"xxx" },
-  ],
-  "网络xxx": [
-      { "id":1, "name":"xxzx" },
-      { "id":2, "name":"xxzzzxx" },
-      { "id":3, "name":"xxxzzzzxx" },
-  ],
+  ]
 }
