@@ -8,6 +8,7 @@ permalink: /post.json
         "url": {{ post.url | jsonify }},
         "category": {{ post.category | jsonify }},
         "date": {{ post.date | jsonify }},
-        "tags": {{ post.tags | jsonify }}
+        "tags": {{ post.tags | jsonify }},
+        "content": {{ post.content | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}]
