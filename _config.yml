@@ -233,3 +233,7 @@ timezone: Asia/Shanghai
 # baidu verify
 keep_files: [robots.txt, baidu_verify_codeva-H0cTVyuWvb.html.html, aef4d9b4f84e3b6189710baa9fca2df5.txt, sogousiteverification.txt]
 
+collections:
+  api:
+    output: true
+    permalink: /api/:name.json
