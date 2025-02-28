@@ -18,6 +18,7 @@ banner:
   subheading_style: "color: gold"
 tags: jekyll theme yat
 sidebar: []
+published: false
 ---
 
 您可以在“_posts”目录中找到这篇文章. 编辑它并重新构建网站以查看您的更改. 您可以通过多种不同的方式重新构建网站, 但最常见的方法还是运行`jekyll serve`, 它会启动 Web 服务器并在文件更新时自动重新生成您的网站.
