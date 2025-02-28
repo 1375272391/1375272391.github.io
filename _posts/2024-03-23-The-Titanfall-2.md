@@ -71,5 +71,5 @@ tags: Gaming Titan Titanfall2
 <br>
 
 ![](/assets/Daily-image/20240323/0502.jpg)
-#### 死亡会改变一个人。它会逼迫你反省自己，做出选择。————Halo Infinite <br>
+#### 死亡会改变一个人。它会逼迫你反省自己，做出选择。————Halo<br>
 #### 但，总要向前<br>

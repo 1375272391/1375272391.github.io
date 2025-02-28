@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "课表导入上线"
+title:  "小爱课表导入上线"
 author: XM137
 date:   2023-12-21 12:38:00 +0800
 categories: School-Life
