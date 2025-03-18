@@ -1,9 +1,0 @@
----
-layout: null
----
-{
-    "url": [
-      { "id": 1, "name": "网络234", "url": "https://xm137.org.cn/api/234.json" },
-      { "id": 2, "name": "users", "url": "https://xm137.org.cn/api/users.json" }
-    ]
-  }
