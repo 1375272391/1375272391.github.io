@@ -22,16 +22,14 @@ tags: ENSP FireWall USG6000V
 >
 
 
-# `IP地址`自行更改
+# `IP地址`、`姓名简拼` 自行更改
 
 ## AR1
 {% highlight cli %}
 <Huawei>sy
 Enter system view, return user view with Ctrl+Z.
 [Huawei]int g0/0/0
-[Huawei-GigabitEthernet0/0/0]
 [Huawei-GigabitEthernet0/0/0]ip a 192.168.17.2 24
-[Huawei-GigabitEthernet0/0/0]
 [Huawei-GigabitEthernet0/0/0]q
 [Huawei]ip route-static 0.0.0.0 0 192.168.17.1
 {% endhighlight %}
@@ -52,9 +50,7 @@ ip route-static 0.0.0.0 0 192.168.17.1
 <Huawei>sy
 Enter system view, return user view with Ctrl+Z.
 [Huawei]int g0/0/0
-[Huawei-GigabitEthernet0/0/0]
 [Huawei-GigabitEthernet0/0/0]ip a 17.1.1.2 24
-[Huawei-GigabitEthernet0/0/0]
 [Huawei-GigabitEthernet0/0/0]q
 [Huawei]ip route-static 0.0.0.0 0 17.1.1.1
 {% endhighlight %}
@@ -79,6 +75,7 @@ Please enter old password: Admin@123
 Please enter new password: Aa123456
 Please confirm new password: Aa123456
 <USG6000V1>sy
+Enter system view, return user view with Ctrl+Z.
 [USG6000V1]int g1/0/0
 [USG6000V1-GigabitEthernet1/0/0]ip a 192.168.17.1 24
 [USG6000V1-GigabitEthernet1/0/0]service-m p p
