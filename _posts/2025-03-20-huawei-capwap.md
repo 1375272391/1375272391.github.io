@@ -11,8 +11,8 @@ tags: ENSP AC AP
 
 首先，最基础的，我们需要让AP与AC建立基本的连接
 
-设备上默认有一个vlan1，
-我们用它来实现dhcp和capwap
+设备上默认有一个VLAN1，
+我们用它来实现DHCP和CAPWAP
 
 
 为AP分配地址
@@ -122,7 +122,7 @@ Info: This operation may take a few seconds, please wait...done.
 
 在默认情况下，AC对AP的认证模式是MAC认证
 
-PPT给的是手工添加的AP，需要手工查看MAC地址，名字也要取一个，
+课程示例给的是手工添加AP，需要手工查看MAC地址，名字也要取一个，
 
 既然已经通过CAPWAP建立连接，为何不直接使用呢
 
