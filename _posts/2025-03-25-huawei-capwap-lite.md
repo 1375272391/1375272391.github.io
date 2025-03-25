@@ -119,6 +119,7 @@ Current system time: 2025-03-25 21:13:59-05:13
     Input bandwidth utilization  : --
     Output bandwidth utilization : --
 	
+## 哇哦获取到了Net8的地址呢，但是在这里不重要
 {% endhighlight %}
 就可以看到MAC地址，让我们复制一下
 
