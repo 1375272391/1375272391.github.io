@@ -7,6 +7,9 @@ categories: ENSP
 tags: ENSP AC AP
 ---
 
+拓扑 **[20250326.zip](/assets/ENSP/20250326/20250326.zip)**
+
+如果懒得画，介拓扑还是建议自己换俩AP，避免MAC雷同
 
 这次的作业仅是AC和AP建立基本连接<br>
 其余并无特殊
