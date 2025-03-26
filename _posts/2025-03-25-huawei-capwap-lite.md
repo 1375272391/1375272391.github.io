@@ -55,7 +55,7 @@ Info: This operation may take a few seconds. Please wait for a moment...done.
 [AC6605-GigabitEthernet0/0/2]p d v 101
 {% endhighlight %}
 
-AP与AC还要有隔离，那么，如下
+AP与AC相连端口还要有隔离，那么，如下
 {% highlight cli %}
 [AC6605-GigabitEthernet0/0/2]int g0/0/1
 [AC6605-GigabitEthernet0/0/1]p l t
