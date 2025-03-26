@@ -96,7 +96,7 @@ Info: The current country code is same with the input country code.
 [AC6605-wlan-regulate-domain-CN]q
 [AC6605-wlan-view]ap auth-mode mac-auth ## 默认就是MAC认证，想打可以打一打，笔者不打
 [AC6605-wlan-view]ap-group n ap ## 让我们创建一个名为AP的组
-[AC6605-wlan-ap-group-ap]regulatory-domain-profile CN ## 应用一下国家吗
+[AC6605-wlan-ap-group-ap]regulatory-domain-profile CN ## 应用一下国家码
 Warning: Modifying the country code will clear channel, power and antenna gain c
 onfigurations of the radio and reset the AP. Continue?[Y/N]:y ## 记得确认
 [AC6605-wlan-ap-group-ap]q
