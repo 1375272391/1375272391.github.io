@@ -81,7 +81,7 @@ Info: The operation may take a few seconds. Please wait for a moment.done.
 [AC6605-Vlanif100]dhcp se in
 [AC6605-Vlanif100]dhcp server excluded-ip-address 192.168.100.1
 [AC6605-Vlanif100]dhcp ser l d 21 ## 根据需要加吧，不加也行
-[AC6605-Vlanif100]dhcp server dns-list 182.168.100.1 ## 同上
+[AC6605-Vlanif100]dhcp server dns-list 192.168.100.1 ## 同上
 {% endhighlight %}
 
 指定CAPWAP源
@@ -146,7 +146,7 @@ ontinue? [Y/N]:y
 Info: This operation may take a few seconds. Please wait for a moment.. done.
 {% endhighlight %}
 
-下面让我们看看状态
+下面让我们来看看状态
 {% highlight cli %}
 [AC6605-wlan-ap-2]dis ap all
 {% endhighlight %}
