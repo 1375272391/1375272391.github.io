@@ -43,7 +43,7 @@ tags: ENSP AC AP
 
 下面我们开始<br>
 管理VLAN 100、业务VLAN 101<br>
-建一个VLAN 100 送给 `GigabitEthernet0/0/1` `GigabitEthernet0/0/4` <br>
+建一个VLAN 100 送给 `GigabitEthernet0/0/1`、`GigabitEthernet0/0/4` <br>
 再建一个 VLAN 101 送给 `GigabitEthernet0/0/2`
 {% highlight cli %}
 <AC6605>sy
@@ -55,7 +55,9 @@ Info: This operation may take a few seconds. Please wait for a moment...done.
 [AC6605-GigabitEthernet0/0/2]p d v 101
 {% endhighlight %}
 
-AP与AC相连端口还要有隔离，那么，如下
+我们需要放行管理VLAN、业务VLAN<br>
+并为AP端口指定pvid 100 以便其获取管理IP地址，<br>
+AP之间还要有隔离，那么，如下
 {% highlight cli %}
 [AC6605-GigabitEthernet0/0/2]int g0/0/1
 [AC6605-GigabitEthernet0/0/1]p l t
@@ -119,7 +121,7 @@ Current system time: 2025-03-25 21:13:59-05:13
     Input bandwidth utilization  : --
     Output bandwidth utilization : --
 	
-## 哇哦获取到了Net8的地址呢，但是在这里不重要
+## 哇哦获取到了VMnet8的地址呢，但是在这里不重要
 {% endhighlight %}
 就可以看到MAC地址，让我们复制一下
 
