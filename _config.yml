@@ -230,8 +230,9 @@ plugins:
 # TZ
 timezone: Asia/Shanghai
 
-# search verify
-keep_files: [robots.txt, baidu_verify_codeva-H0cTVyuWvb.html.html, aef4d9b4f84e3b6189710baa9fca2df5.txt, sogousiteverification.txt, BingSiteAuth.xml]
+# search verify 
+# for bing indexnow (ee9e5bb8562540bfbd483f6004c72ae4.txt)
+keep_files: [robots.txt, baidu_verify_codeva-H0cTVyuWvb.html.html, aef4d9b4f84e3b6189710baa9fca2df5.txt, sogousiteverification.txt, BingSiteAuth.xml, ee9e5bb8562540bfbd483f6004c72ae4.txt]
 
 collections:
   api:
