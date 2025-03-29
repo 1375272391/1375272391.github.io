@@ -7,6 +7,8 @@ categories: ENSP
 tags: ENSP FireWall USG6000V
 ---
 
+ENSP USG6000V security-policy firewall zone Firewall 防火墙 华为 
+
 ## 拓扑 **[security-policy](/assets/ENSP/20250319/security-policy.zip)**
 
 >

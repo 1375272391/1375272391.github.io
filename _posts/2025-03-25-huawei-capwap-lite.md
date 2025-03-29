@@ -7,6 +7,8 @@ categories: ENSP
 tags: ENSP AC AP
 ---
 
+ENSP CAPWAP AC AP
+
 拓扑 **[20250326.zip](/assets/ENSP/20250326/20250326.zip)**
 
 如果懒得画，介拓扑还是建议自己换俩AP，避免MAC雷同
