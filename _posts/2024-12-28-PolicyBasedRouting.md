@@ -7,6 +7,8 @@ categories: ENSP
 tags: ENSP Policy-Based_Routing
 ---
 
+策略路由 traffic classifier、traffic behavior、traffic policy
+
 ## 拓扑 **[PBR.zip](/assets/ENSP/20241226/PBR.zip)**
 
 
