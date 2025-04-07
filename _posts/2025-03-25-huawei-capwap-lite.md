@@ -34,13 +34,21 @@ ENSP CAPWAP AC AP
 ![](/assets/ENSP/20250326/image3.webp)
 使用`VirtualBox Host-Only Ethernet Adapter` 网卡的IP+虚拟设备端口号来访问虚拟设备<br>
 一般情况下 `VirtualBox Host-Only Ethernet Adapter` 网卡的IP地址为 192.168.56.1<br>
+华为的文档，用的是`127.0.0.1`<br>
 那么，
 ![](/assets/ENSP/20250326/image4.webp)
 
 看起来这很好对吧，但是它会出现一些奇怪的东西
 ![](/assets/ENSP/20250326/image5.webp)
 有时间的同窗可以研究一下<br>
-著名机房313给的CRT倒是不会出现那种问题
+
+根据华为的文档，我们更改`CRT`的设置
+![](/assets/ENSP/20250326/0407/image1.webp)
+![](/assets/ENSP/20250326/0407/image2.webp)
+![](/assets/ENSP/20250326/0407/image3.webp)
+
+`ENSP`中有对应中文的帮助文档`如何让SecureCRT连接到仿真设备后支持Tab键操作`<br>
+以及`如何通过SecureCRT登录eNSP模拟设备`
 
 
 下面我们开始<br>
