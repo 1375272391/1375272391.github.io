@@ -2,7 +2,7 @@
 layout: post
 title:  "实验 10 DHCP服务及中继配置"
 author: XM137
-date:   2025-04-15 13:40:50 +0800
+date:   2025-04-15 19:28:31 +0800
 categories: FW
 tags: USG6000V DHCP relay
 ---
