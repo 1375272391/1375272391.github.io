@@ -77,7 +77,7 @@ Info: The current country code is same with the input country code.
 ```
 
 VAP，可以理解为多个SSID信号<br>
-在这里我们将引用SSID模板、加密配置模板<br>
+在这里我们将引用SSID模板、安全配置模板<br>
 配置转发模式、业务VLAN
 ```CLI
 [AC6605-wlan-view]vap-profile name vap
@@ -157,6 +157,8 @@ Record time: 2025-03-19 21:33:21
 [AC6605-wlan-view]ap-confirm all
 Info: Confirm AP completely. Success count: 2. Failure count: 0.
 ```
+使用手工认证的AP默认都在`default`组，也就是默认组<br>
+也就是为什么一开始就在默认组里引用而不是新建一个组<br>
 OK，让我们看看所有AP
 ```CLI
 [AC6605-wlan-view]dis ap all
