@@ -77,8 +77,9 @@ Info: The current country code is same with the input country code.
 ```
 
 VAP，可以理解为多个SSID信号<br>
+在这里我们将引用SSID模板、加密配置模板<br>
+配置转发模式、业务VLAN
 ```CLI
-在这里我们将引用SSID、加密配置、转发模式、业务VLAN
 [AC6605-wlan-view]vap-profile name vap
 [AC6605-wlan-vap-prof-vap]ssid-profile SSID
 Info: This operation may take a few seconds, please wait.done.
