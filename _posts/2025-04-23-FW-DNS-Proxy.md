@@ -7,7 +7,10 @@ categories: FW
 tags: USG6000V FW NAT DNS-Proxy
 ---
 
+实验 11 DNS透明代理
 ## 名称、地址自行替换
+
+拓扑 **[0423dnsproxy.zip](/assets/ENSP/20250423/0423dnsproxy.zip)**
 
 ## 地址配置
 
@@ -80,7 +83,6 @@ Info: Information center is disabled.
 [USG6000V1-slb-vserver-0]protocol any 
 [USG6000V1-slb-vserver-0]group telcome
 [USG6000V1-slb-vserver-0]slb enable 
-[USG6000V1-slb]q
 [USG6000V1]dns-transparent-policy
 [USG6000V1-policy-dns]dns transparent-proxy enable
 [USG6000V1-policy-dns]dns server bind interface GigabitEthernet 1/0/0 preferred 110.110.110.254
