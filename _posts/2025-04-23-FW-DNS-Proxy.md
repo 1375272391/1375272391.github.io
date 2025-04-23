@@ -99,14 +99,13 @@ Info: Information center is disabled.
 [Huawei-GigabitEthernet0/0/1]ip a 110.110.110.1 24
 [Huawei-GigabitEthernet0/0/1]int g0/0/2
 [Huawei-GigabitEthernet0/0/2]ip a 17.0.0.1 24
-[Huawei-GigabitEthernet0/0/2]
 {% endhighlight %}
 
 ## 设备配置
 DNS Server
-[](/assets/ENSP/20250423/image1.webp)
+![](/assets/ENSP/20250423/image1.webp)
 http server 
-[](/assets/ENSP/20250423/image2.webp)
+![](/assets/ENSP/20250423/image2.webp)
 
 ## 测试
-[](/assets/ENSP/20250423/image3.webp)
+![](/assets/ENSP/20250423/image3.webp)
