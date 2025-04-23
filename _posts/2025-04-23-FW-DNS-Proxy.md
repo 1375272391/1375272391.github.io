@@ -105,9 +105,9 @@ Info: Information center is disabled.
 {% endhighlight %}
 
 ## 设备配置
-DNS Server
+### DNS Server
 ![](/assets/ENSP/20250423/image1.webp)
-http server 
+### HTTP Server 
 ![](/assets/ENSP/20250423/image2.webp)
 
 ## 测试
