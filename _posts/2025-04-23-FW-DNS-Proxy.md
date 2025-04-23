@@ -49,10 +49,7 @@ Info: Information center is disabled.
 [USG6000V1-zone-trust]q
 [USG6000V1]firewall zone untrust 
 [USG6000V1-zone-untrust]a i g 1/0/0
-[USG6000V1-zone-untrust]q
-[USG6000V1]int g1/0/1
-[USG6000V1-GigabitEthernet1/0/1]q
-[USG6000V1]int g1/0/1
+[USG6000V1-zone-untrust]int g1/0/1
 [USG6000V1-GigabitEthernet1/0/1]ip a 192.168.17.1 24
 [USG6000V1-GigabitEthernet1/0/1]int g1/0/0
 [USG6000V1-GigabitEthernet1/0/0]ip a 100.100.100.1 24
@@ -89,6 +86,62 @@ Info: Information center is disabled.
 [USG6000V1-policy-dns]q
 [USG6000V1]ip route-static 0.0.0.0 0 100.100.100.2
 {% endhighlight %}
+<details>
+<summary>文本配置</summary>
+{% highlight cli %}
+admin
+Admin@123
+y
+Admin@123
+Aa123456
+Aa123456
+
+sy
+u in e
+firewall zone trust 
+a i g 1/0/1
+q
+firewall zone untrust 
+a i g 1/0/0
+int g1/0/1
+ip a 192.168.17.1 24
+int g1/0/0
+ip a 100.100.100.1 24
+q
+security-policy
+rule n sec
+source-zone trust 
+destination-zone untrust 
+source-address 192.168.17.0 24
+ac p
+q
+q
+nat-policy
+rule n nat
+source-zone trust 
+destination-zone untrust 
+source-address 192.168.17.0 24
+act source-nat easy-ip 
+q
+q
+slb
+group telcome
+rserver rip 110.110.110.254 p 53
+action optimize 
+q
+vserver PDNS
+vip 10.10.10.10
+protocol any 
+group telcome
+slb enable 
+dns-transparent-policy
+dns transparent-proxy enable
+dns server bind interface GigabitEthernet 1/0/0 preferred 110.110.110.254
+q
+ip route-static 0.0.0.0 0 100.100.100.2
+{% endhighlight %}
+</details>
+
 
 ## RT
 {% highlight cli %}
@@ -103,6 +156,22 @@ Info: Information center is disabled.
 [Huawei-GigabitEthernet0/0/1]int g0/0/2
 [Huawei-GigabitEthernet0/0/2]ip a 17.0.0.1 24
 {% endhighlight %}
+<details>
+<summary>文本配置</summary>
+{% highlight cli %}
+sy
+Enter system view, return user view with Ctrl+Z.
+u in e
+Info: Information center is disabled.
+int g 0/0/0
+ip a 100.100.100.2 24
+int g0/0/1
+ip a 110.110.110.1 24
+int g0/0/2
+ip a 17.0.0.1 24
+
+{% endhighlight %}
+</details>
 
 ## 设备配置
 ### DNS Server
