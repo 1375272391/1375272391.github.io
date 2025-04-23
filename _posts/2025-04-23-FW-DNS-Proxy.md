@@ -160,9 +160,7 @@ Info: Information center is disabled.
 <summary>文本配置</summary>
 {% highlight cli %}
 sy
-Enter system view, return user view with Ctrl+Z.
 u in e
-Info: Information center is disabled.
 int g 0/0/0
 ip a 100.100.100.2 24
 int g0/0/1
