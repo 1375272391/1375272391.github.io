@@ -9,7 +9,7 @@ tags: USG6000V FW IPSEC VPN
 
 ## 需要为`IPSEC`添加策略放行协商报文<br> 预共享密钥、IP地址自行替换
 
-拓扑 **[IPSECVPN.zip](/assets/ENSP/20250507/IPSECVPN.zip)**
+### 拓扑 **[IPSECVPN.zip](/assets/ENSP/20250507/IPSECVPN.zip)**
 
 
 ## 地址配置
@@ -327,7 +327,7 @@ display ipsec sa
 ```
 #### 正常来说两个命令都应该有数据 <br>若仅只有时间，请稍作等待<br> 若等待较长时间仍无显示，请检查配置
 
-命令示例如下：
+#### 命令示例如下：
 {% highlight cli %}
 [USG6000V1]display ike sa
 2025-05-07 15:10:12.750 
@@ -409,6 +409,7 @@ From 192.168.18.10: bytes=32 seq=5 ttl=126 time=16 ms
 
 PC>
 {% endhighlight %}
-## 参考文档:[查看VPN状态][LTE-IPSEC] <br> [防火墙在LTE IPSec解决方案中的应用][State-IPSEC]
+## 参考文档:<br>[查看VPN状态][LTE-IPSEC] <br> [防火墙在LTE IPSec解决方案中的应用][State-IPSEC]
+
 [LTE-IPSEC]: https://support.huawei.com/enterprise/zh/doc/EDOC1100062976/a416fee6?idPath=24030814|9856724|21430823|253423179|22690082
 [State-IPSEC]: https://support.huawei.com/enterprise/zh/doc/EDOC1000160160/2d53d255
