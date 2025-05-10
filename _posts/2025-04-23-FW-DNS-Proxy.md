@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "实验 11 DNS透明代理"
+subtitle: "eNSP USG6000V"
 author: XM137
 date:   2025-04-23 15:20:40 +0800
 categories: FW
