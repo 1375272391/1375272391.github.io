@@ -213,7 +213,11 @@ utterances:
 
 #theme: minima
 #remote_theme: 1375272391/minima
-remote_theme: 1375272391/jekyll-theme-yat
+# remote_theme: 1375272391/jekyll-theme-yat
+
+# try use origin repo
+remote_theme: "jeffreytse/jekyll-theme-yat"
+
 
   # Build settings
 markdown: kramdown
