@@ -242,6 +242,16 @@ collections:
     output: true
     permalink: /api/:name.json
 
+
+# Excerpt settings
+excerpt:
+#   default_image: /assets/images/default-image.jpeg  # Default image when the image style is not none
+#   image_style: z          # Image layout style (It's value could be none, left, right, top, z, z-reverse)
+   image_width: 497px      # Image default width
+#   image_height: 160px     # Image default height
+#   text_size: 350          # Words default size
+
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
