@@ -217,7 +217,7 @@ remote_theme: 1375272391/jekyll-theme-yat
 
   # Build settings
 markdown: kramdown
-kmarkdown:
+kramdown:
   input: GFM
 
   
