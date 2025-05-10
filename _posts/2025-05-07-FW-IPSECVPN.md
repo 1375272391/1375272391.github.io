@@ -410,8 +410,7 @@ From 192.168.18.10: bytes=32 seq=5 ttl=126 time=16 ms
 
 PC>
 {% endhighlight %}
-### 参考文档:<br>[查看VPN状态][State-IPSEC] <br> [防火墙在LTE IPSec解决方案中的应用][LTE-IPSEC]
+### 参考文档:<br>[查看VPN状态](https://support.huawei.com/enterprise/zh/doc/EDOC1100062976/a416fee6?idPath=24030814|9856724|21430823|253423179|22690082) <br> [防火墙在LTE IPSec解决方案中的应用][LTE-IPSEC]
 
-[LTE-IPSEC]: https://support.huawei.com/enterprise/zh/doc/EDOC1100062976/a416fee6?idPath=24030814|9856724|21430823|253423179|22690082
 
 [State-IPSEC]: https://support.huawei.com/enterprise/zh/doc/EDOC1000160160/2d53d255
