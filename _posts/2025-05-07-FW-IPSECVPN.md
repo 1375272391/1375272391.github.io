@@ -15,10 +15,10 @@ tags: USG6000V FW IPSEC VPN
 
 ## 地址配置
 
-|    设备     |        IP地址      |       子网掩码       |        网关        |
-|   :----:    |        :----:      |       :----:        |       :----:       |
-|     PC1     |    192.168.17.10   |    255.255.255.0    |    192.168.17.1    |
-|     PC2     |    192.168.18.10   |    255.255.255.0    |    192.168.18.1    |
+%7C    设备     %7C        IP地址      %7C       子网掩码       %7C        网关        %7C
+%7C   :----:    %7C        :----:      %7C       :----:        %7C       :----:       %7C
+%7C     PC1     %7C    192.168.17.10   %7C    255.255.255.0    %7C    192.168.17.1    %7C
+%7C     PC2     %7C    192.168.18.10   %7C    255.255.255.0    %7C    192.168.18.1    %7C
 
 
 ## AR
@@ -336,8 +336,8 @@ display ipsec sa
 IKE SA information :
  Conn-ID    Peer                                          VPN              Flag(s)               Phase  RemoteType  RemoteID        
 ------------------------------------------------------------------------------------------------------------------------------------
- 3          30.0.0.2:500                                                   RD|ST|A               v2:2   IP          30.0.0.2        
- 2          30.0.0.2:500                                                   RD|ST|A               v2:1   IP          30.0.0.2        
+ 3          30.0.0.2:500                                                   RD%7CST%7CA               v2:2   IP          30.0.0.2        
+ 2          30.0.0.2:500                                                   RD%7CST%7CA               v2:1   IP          30.0.0.2        
 
   Number of IKE SA : 2
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -410,8 +410,8 @@ From 192.168.18.10: bytes=32 seq=5 ttl=126 time=16 ms
 
 PC>
 {% endhighlight %}
-### 参考文档:<br>[查看VPN状态] <br> 
-```URL
- [查看VPN状态](https://support.huawei.com/enterprise/zh/doc/EDOC1100062976/a416fee6?idPath=24030814|9856724|21430823|253423179|22690082)
-[防火墙在LTE IPSec解决方案中的应用](https://support.huawei.com/enterprise/zh/doc/EDOC1000160160/2d53d255)
-```
+### 参考文档:<br>[查看VPN状态][State-IPSEC] <br> [防火墙在LTE IPSec解决方案中的应用][LTE-IPSEC]
+
+[LTE-IPSEC]: https://support.huawei.com/enterprise/zh/doc/EDOC1100062976/a416fee6?idPath=24030814%7C9856724%7C21430823%7C253423179%7C22690082
+
+[State-IPSEC]: https://support.huawei.com/enterprise/zh/doc/EDOC1000160160/2d53d255
