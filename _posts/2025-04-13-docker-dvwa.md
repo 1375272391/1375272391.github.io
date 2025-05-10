@@ -1,12 +1,14 @@
 ---
 layout: post
 title:  "基于Docker的DVWA"
-excerpt_image: /assets/docker-logos/SVG/docker-logo-blue.svg
+excerpt_image: /assets/docker-logos/PNG/docker-logo-blue-1.png
 author: XM137
 date:   2025-04-13 17:10:37 +0800
 categories: Docker
 tags: Docker DVWA
 ---
+
+![banner](/assets/docker-logos/SVG/docker-logo-blue.svg)
 
 使用`Docker`搭建`DVWA`相当的简单，因为有做好的镜像，直接拉取就能使用<br>
 写这篇文章主要是为了再次记忆其中的一些参数
