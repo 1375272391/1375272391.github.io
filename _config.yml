@@ -231,6 +231,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+  - jekyll-remote-theme
 
 # TZ
 timezone: Asia/Shanghai
