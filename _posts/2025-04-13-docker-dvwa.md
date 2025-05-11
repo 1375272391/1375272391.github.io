@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "基于Docker的DVWA"
+excerpt_image: /assets/docker-logos/PNG/docker-logo-blue-900.png
 author: XM137
 date:   2025-04-13 17:10:37 +0800
 categories: Docker
