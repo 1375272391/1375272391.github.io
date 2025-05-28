@@ -1,0 +1,2 @@
+`nmap --script=vuln target`
+
