@@ -8,8 +8,7 @@ title: 关于
 
 <h3>拒绝精神内耗，从现在开始。拥抱美好人生，从行动开始</h3>
 
-#### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] && [Cloudflare][CF]
-#### [zstatic][zstatic]
+#### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] && [Cloudflare][CF] <br> 感谢[zstatic][zstatic]提供静态资源CDN
 
 
 <h4>作者昵称 熊猫 <br>
@@ -27,10 +26,6 @@ XM137由来：取作者Q简拼加前三位<br>
 大学两年生活即将结束<br>
 这里或许不会再更新作业了
 </h4>
-
-[www.zstatic.net](http://www.zstatic.net)
-
-del async to testing highlight loading
 
 [GP]: https://pages.github.com
 [JL]: https://jekyllrb.com
