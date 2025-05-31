@@ -30,6 +30,8 @@ XM137由来：取作者Q简拼加前三位<br>
 
 [www.zstatic.net](www.zstatic.net)
 
+del async to testing highlight loading
+
 [GP]: https://pages.github.com
 [JL]: https://jekyllrb.com
 [YT]: https://github.com/jeffreytse/jekyll-theme-yat
