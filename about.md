@@ -9,7 +9,7 @@ title: 关于
 <h3>拒绝精神内耗，从现在开始。拥抱美好人生，从行动开始</h3>
 
 #### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] && [Cloudflare][CF]
-#### [BootCDN][BootCDN]
+#### [BootCDN][BootCDN] & [bytedance][bytedance]
 
 
 <h4>作者昵称 熊猫 <br>
@@ -33,3 +33,4 @@ XM137由来：取作者Q简拼加前三位<br>
 [YT]: https://github.com/jeffreytse/jekyll-theme-yat
 [CF]: https://www.cloudflare.com
 [BootCDN]: https://api.bootcdn.cn
+[bytedance]: cdn.bytedance.com
