@@ -28,6 +28,8 @@ XM137由来：取作者Q简拼加前三位<br>
 这里或许不会再更新作业了
 </h4>
 
+[www.zstatic.net](www.zstatic.net)
+
 [GP]: https://pages.github.com
 [JL]: https://jekyllrb.com
 [YT]: https://github.com/jeffreytse/jekyll-theme-yat
