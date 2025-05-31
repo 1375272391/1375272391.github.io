@@ -22,6 +22,11 @@ XM137由来：取作者Q简拼加前三位<br>
 在这里记录的作业仅是课后作业，及笔者或同学没能在课上解决的作业
 </h4>
 
+<h4>
+大学两年生活即将结束<br>
+这里或许不会再更新作业了
+</h4>
+
 [GP]: https://pages.github.com
 [JL]: https://jekyllrb.com
 [YT]: https://github.com/jeffreytse/jekyll-theme-yat
