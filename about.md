@@ -10,18 +10,13 @@ title: 关于
 
 #### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] && [Cloudflare][CF] <br> 感谢[zstatic][zstatic]提供静态资源CDN
 
-
-<h4>昵称: XM137[熊猫] <br>
-班级：计网234<br>
-</h4>
-
 <h4>
 大学两年生活即将结束<br>
 这里或许不会再更新作业了
 </h4>
 
-<h4>阿里云镜像站点</h4>
-<a href="http://101.37.34.33">link</a>
+<a href="http://101.37.34.33"><h4>阿里云镜像站点</h4></a>
+
 
 [GP]: https://pages.github.com
 [JL]: https://jekyllrb.com
