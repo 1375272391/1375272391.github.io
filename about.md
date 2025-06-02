@@ -15,7 +15,8 @@ title: 关于
 这里或许不会再更新作业了
 </h4>
 
-<a href="http://101.37.34.33"><h4>阿里云镜像站点</h4></a>
+### [阿里云镜像站点][mirror]
+
 
 
 [GP]: https://pages.github.com
@@ -23,3 +24,4 @@ title: 关于
 [YT]: https://github.com/jeffreytse/jekyll-theme-yat
 [CF]: https://www.cloudflare.com
 [zstatic]: https://www.zstatic.net
+[mirror]: http://101.37.34.33
