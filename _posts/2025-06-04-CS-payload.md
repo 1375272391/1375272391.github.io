@@ -34,4 +34,6 @@ f.close()
 其实已经试过了，IDA可以查看伪码<br>
 die也告知这是一个DLL...
 
+至于生成什么样的payload，以及如何加密，仓库中都有介绍，可自行查阅
+
 [bypassAV]: https://github.com/MentalityXt/bypassAV
