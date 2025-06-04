@@ -3,8 +3,8 @@ layout: post
 title:  "CS Payload 一点探究"
 author: XM137
 date:   2025-06-04 23:49:06 +0800
-categories: "Cobalt Strike"
-tags: "Cobalt Strike"
+categories: Cobalt-Strike
+tags: Cobalt-Strike
 ---
 
 学长给了一个shellcode加载器[MentalityXt/bypassAV][bypassAV] <br>
