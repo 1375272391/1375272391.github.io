@@ -3,8 +3,8 @@ layout: post
 title:  "实验 3 防火墙安全域及策略"
 author: XM137
 date:   2025-03-19 00:10:59 +0800
-categories: ENSP
-tags: ENSP FireWall USG6000V
+categories: Firewall
+tags: [ENSP, FireWall, USG6000V]
 ---
 
 ENSP USG6000V security-policy firewall zone Firewall 防火墙 华为 

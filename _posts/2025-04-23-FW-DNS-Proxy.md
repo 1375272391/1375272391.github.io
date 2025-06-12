@@ -4,8 +4,8 @@ title:  "实验 11 DNS透明代理"
 subtitle: "eNSP USG6000V"
 author: XM137
 date:   2025-04-23 15:20:40 +0800
-categories: FW
-tags: USG6000V FW NAT DNS-Proxy
+categories: Firewall
+tags: [USG6000V, Firewall, NAT, DNS-Proxy]
 ---
 
 实验 11 DNS透明代理

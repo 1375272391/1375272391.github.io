@@ -4,8 +4,8 @@ title:  "实验 10 DHCP服务及中继配置"
 subtitle: "eNSP USG6000V"
 author: XM137
 date:   2025-04-15 19:28:31 +0800
-categories: FW
-tags: USG6000V DHCP relay
+categories: Firewall
+tags: [USG6000V, DHCP-relay]
 ---
 
 实验 10 DHCP服务及中继配置

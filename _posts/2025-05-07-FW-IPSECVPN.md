@@ -4,8 +4,8 @@ title:  "实验 13 IPSECVPN 配置"
 subtitle: "eNSP USG6000V"
 author: XM137
 date:   2025-05-07 23:32:20 +0800
-categories: FW
-tags: USG6000V FW IPSEC VPN
+categories: Firewall
+tags: [USG6000V, Firewall, IPSEC, VPN]
 ---
 
 ## 需要为`IPSEC`添加策略放行协商报文<br> 预共享密钥、IP地址自行替换
