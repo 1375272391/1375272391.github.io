@@ -145,7 +145,7 @@ header_pages:
 defaults:
    home:
      heading: "向前，并不断进步"
-     subheading: "我们，有缘再见"
+     subheading: "各位，有缘再见"
      banner: "/assets/heaven-4487560_1280.webp"
 
 # Banner default settings
