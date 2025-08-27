@@ -1,7 +1,17 @@
 ---
 layout: null
 ---
-{
-  { "id": 1, "name": "Alice" },
-  { "id": 2, "name": "Bob" }
-}
+[
+  {
+    "id": 0,
+    "name": "Alice"
+  },
+  {
+    "id": 1,
+    "name": "Bob"
+  },
+  {
+    "id": 2,
+    "name": "John"
+  }
+]
