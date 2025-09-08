@@ -232,7 +232,8 @@ timezone: Asia/Shanghai
 # search verify 
 # for bing indexnow (ee9e5bb8562540bfbd483f6004c72ae4.txt)
 # add mirror html
-keep_files: [robots.txt, baidu_verify_codeva-H0cTVyuWvb.html.html, aef4d9b4f84e3b6189710baa9fca2df5.txt, sogousiteverification.txt, BingSiteAuth.xml, ee9e5bb8562540bfbd483f6004c72ae4.txt, mirror.html, typeface-noto-sans.min.css]
+# add zerossl
+keep_files: [robots.txt, baidu_verify_codeva-H0cTVyuWvb.html.html, aef4d9b4f84e3b6189710baa9fca2df5.txt, sogousiteverification.txt, BingSiteAuth.xml, ee9e5bb8562540bfbd483f6004c72ae4.txt, mirror.html, typeface-noto-sans.min.css, 80F4101B55B836E67994F69EBEF7731A.txt]
 
 collections:
   api:
