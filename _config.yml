@@ -145,7 +145,7 @@ header_pages:
 defaults:
    home:
      heading: "向前，并不断进步"
-     subheading: "加油，少年!"
+     subheading: "上吧!"
      banner: "/assets/heaven-4487560_1280.webp"
 
 # Banner default settings
