@@ -198,12 +198,12 @@ defaults:
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
 
-utterances:
-   repo: "1375272391/github.io-issues"
-   issue_term: "pathname"
-   label: "utterances comment"
-   theme: "preferred-color-scheme"
-   follow_site_theme: true
+# utterances:
+#    repo: "1375272391/github.io-issues"
+#    issue_term: "pathname"
+#    label: "utterances comment"
+#    theme: "preferred-color-scheme"
+#    follow_site_theme: true
 
 # Build settings
 # highlighter: none
