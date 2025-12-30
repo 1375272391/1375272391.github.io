@@ -11,6 +11,7 @@ title: 关于
 #### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] && [Cloudflare][CF] <br> 感谢[zstatic][zstatic]提供静态资源CDN
 
 ### [阿里云镜像站点][mirror]
+### [阿里云镜像站点www.xm137.org.cn][mirror2]
 
 
 
@@ -19,4 +20,5 @@ title: 关于
 [YT]: https://github.com/jeffreytse/jekyll-theme-yat
 [CF]: https://www.cloudflare.com
 [zstatic]: https://www.zstatic.net
-[mirror]: http://101.37.34.33
+[mirror]: https://101.37.34.33
+[mirror2]: https://www.xm137.org.cn
