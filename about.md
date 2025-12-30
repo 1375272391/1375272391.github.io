@@ -11,7 +11,7 @@ title: 关于
 #### [Github Pages][GP] && [Jekyll][JL] && [Yat Theme][YT] && [Cloudflare][CF] <br> 感谢[zstatic][zstatic]提供静态资源CDN
 
 ### [阿里云镜像站点][mirror]
-### [阿里云镜像站点www.xm137.org.cn][mirror2]
+### [阿里云镜像站点 www.xm137.org.cn][mirror2]
 
 
 
