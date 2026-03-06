@@ -7,7 +7,7 @@ categories: Daily
 tags: ECS
 ---
 # 杭州ECS停服
-## 阿里云杭州区域ECS即将过期 <br>逐步停止服务，释放原有EIP，删除杭州EIP解析 <br>如遇无法访问镜像站，可等待CF完成DNS同步后再次访问 <br>新地域服务器位于河源，可能会增加些许延迟
+## 阿里云杭州区域ECS即将到期 <br>逐步停止服务，释放原有EIP，删除杭州EIP解析 <br>如遇无法访问镜像站，可等待CF完成DNS同步后再次访问 <br>新地域服务器位于河源，可能会增加些许延迟
 
 # RollName APP 相关服务
 ## api服务已随ECS停止运行 <br>RollName无法获取内容属正常现象
