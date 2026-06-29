@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "kotlindoc 镜像站"
+title:  "kotlindoc 简译站"
 author: XM137
 date:   2026-06-25 21:21:16 +0800
 categories: Daily
