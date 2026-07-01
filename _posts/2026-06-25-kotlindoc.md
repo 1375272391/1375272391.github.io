@@ -12,9 +12,6 @@ tags: Kotlin
 ## 手工翻译，难免存在错误，如遇错误或冲突，请以官方原始文档为准
 [https://kotlinlang.org/docs/getting-started.html][kotlin]
 
-## 克隆仓库中 Designing your library 相关文档无法被找到<br>请使用官方文档
-[Introduction to library authors' guidelines][api-guidelines]
-
 ## 项目地址
 [github.com/1375272391/kotlin-web-site-translate-zh][kotlin-web-site-translate-zh]
 
